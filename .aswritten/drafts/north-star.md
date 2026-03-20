@@ -1,47 +1,47 @@
 # North Star
-Generated: 2025-06-12 | From: 5 memories | Last shift: 2025-06-12
+Generated: 2024-05-23 | From: 7 memories | Last shift: 2024-09-15 (Dr. Sarah Chen insights)
 
 ## Focus Lock
-**INACTIVE** — Operating in priority stack mode.
+[INACTIVE — operating in priority stack mode]
 
 ## Priority Stack
 
-### 1. Specific Aims & Significance Framing
-**What:** Refine the "Specific Aims" and "Significance" sections to create a compelling "90-second" hook.
-**Why now:** Reviewers form a "fund/decline" gut reaction within the first 90 seconds; the Aims page is the most important page in the proposal.
-**Evidence:** [2025-03-08-reviewer-psychology.md], [2024-09-15-significance-section-strategy.md]
-**Blocks:** This enables the "advocacy sentence" reviewers need to fight for the proposal during panel discussions.
+### 1. Refine "Significance" Framework
+**What:** Codify the "Gap-Consequence-Unlock" structure into a repeatable template for grant writing.
+**Why now:** Current evidence suggests this is the primary failure point for NSF proposals; addressing it provides the highest leverage for success.
+**Evidence:** `Claim_SignificanceSectionFailureMode`, `Narrative_GapConsequenceUnlock`.
+**Blocks:** Enables the creation of high-impact sales materials and demo templates for grant writers.
 
-### 2. Biological "Why" for Computational Methods
-**What:** Frame all algorithm development and computational pipelines as tools to answer specific biological questions.
-**Why now:** Computational proposals face structural bias from wet-lab reviewers; framing methods as "novel algorithms" is a disadvantage.
-**Evidence:** [2025-06-12-computational-biology-specifics.md]
-**Blocks:** Prevents triage by ensuring reviewers see the work as "real" biology rather than just software engineering.
+### 2. Anti-Pattern Detection
+**What:** Develop a diagnostic checklist to identify "statistics lists" and "relabeled background" sections in draft proposals.
+**Why now:** These are the most common "silent killers" of proposals according to expert reviewers.
+**Evidence:** `Claim_AntiPatterns`, `Narrative_SignificanceSectionFailure`.
+**Blocks:** Necessary for automated feedback loops in future product iterations.
 
-### 3. Budget-to-Narrative Alignment
-**What:** Audit the budget justification to ensure personnel effort and equipment costs map exactly to the project milestones.
-**Why now:** A vague or mismatched budget signals a lack of execution capability and can lead to triage even for brilliant science.
-**Evidence:** [2025-01-20-budget-justification-patterns.md]
-**Blocks:** Validates the feasibility of the project plan and builds trust in the PI’s management ability.
+### 3. Reviewer Empathy Mapping
+**What:** Create a persona profile for the "Overwhelmed Reviewer" (30–40 proposals/session) to guide tone and structure.
+**Why now:** Shifting from "research importance" to "reviewer mental models" is the core strategic pivot identified.
+**Evidence:** `Claim_ReviewerMentalModelGap`, `Narrative_ReviewerFrameOfReference`.
+**Blocks:** Influences all content/visibility and outreach strategies.
 
 ## Session Protocol
 
 When starting a session:
-- Surface the "90-second hook" of the current draft: Does the Specific Aims page provide a single, memorable sentence for a reviewer to use?
-- Check if computational methods are being described by their "how" (algorithms) or their "why" (biological insight).
+- Surface the **Gap-Consequence-Unlock** framework if the user is drafting or reviewing content.
+- Remind the user that the goal is to **bridge the reviewer's mental model gap**, not just list facts.
 
 When the user asks about something off-stack:
-- If the user focuses on technical benchmarks or generic "broader impacts" (like mentoring), redirect toward showing biological "firsts" or specific community partnerships.
+- Briefly address the request, then ask: "How does this help us address the reviewer's frame of reference or the significance gap?"
 
 When work reveals new information:
-- If a new biological insight is found in preliminary data, flag this as a high-priority update for the "Preliminary Data" section to prove the method's value.
+- If a user provides a new "anti-pattern" or a success story from a different agency (NIH, DoD), flag it for a new memory commit to refine the Priority Stack.
 
 ## Horizon
 
 ### Next 2-4 Weeks
-- **Integrated Broader Impacts:** Move away from "checkbox" outreach. Develop specific partnerships (e.g., tribal colleges or underserved watersheds) that actually improve the science. [2024-11-02-broader-impacts-framing.md]
-- **Preliminary Data Visualization:** Create "the one figure" that shows the method finding something standard approaches miss. [2025-06-12-computational-biology-specifics.md]
+- **Empirical Validation:** Test the "Three-Part Structure" against successful/unsuccessful grant samples to move it from "plausible" to "settled ground."
+- **Sales Material Development:** Convert Dr. Chen's insights into a "Significance Masterclass" lead magnet.
 
 ### Open Questions
-- **Reviewer Persona:** Who is the specific "wet-lab" reviewer we are writing for, and what is the specific "gap in their mental model" we are targeting?
-- **Execution Evidence:** Does the budget currently reflect the actual labor required for the proposed computational workstreams?
+- **Cross-Agency Variance:** Does the NSF "Significance" failure mode hold true for NIH "Innovation" or "Significance" sections? (Evidence thin for non-NSF domains).
+- **Automation Feasibility:** Can an LLM reliably distinguish between a "Background" section and a "Significance" section based on these narratives?
