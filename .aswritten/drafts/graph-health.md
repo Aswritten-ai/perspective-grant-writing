@@ -1,98 +1,100 @@
 # Collective Memory Graph Analysis
-Generated: 2025-03-20 | Snapshot: `main@HEAD` | Nodes: 68 | Edges: 124
+Generated: 2024-05-24 | Snapshot: `worldview:all` | Nodes: 104 | Edges: 276
 
 ## Executive Summary
-The Grant Writing Collective graph is a **highly cohesive, practitioner-driven star schema** with deep expertise in reviewer psychology and structural grant framing. While the graph shows strong internal connectivity within tactical domains (Significance, Broader Impacts), it currently lacks a unified **Identity** and horizontal links between the **Budget** and **Reviewer Psychology** clusters. The top priority is codifying the organizational mission to move from a collection of expert tips to a unified strategic worldview.
+The graph is a highly specialized, practitioner-driven knowledge base focused on the "hidden curriculum" of NSF grant writing. It is structurally healthy with a strong "Hub-and-Spoke" topology centered on actionable grant-writing narratives. The top priority is connecting the "Open Stakes" claims to the "Settled Ground" to solidify the transition from individual practitioner advice to established institutional knowledge.
 
 ## Topology Overview
 ### Basic Metrics
-| Metric | Value | Status |
-| :--- | :--- | :--- |
-| **Total Nodes** | 68 | Emerging |
-| **Total Edges** | 124 | Healthy |
-| **Graph Density** | 0.027 | Sparse (Typical for early stage) |
-| **Avg Degree** | 3.65 | Good (High local clustering) |
-| **Diameter** | 5 | Low (Highly reachable) |
+| Metric | Value |
+| :--- | :--- |
+| **Total Nodes** | 104 |
+| **Total Edges** | 276 |
+| **Graph Density** | 0.026 (High for semantic graphs) |
+| **Avg. Degree** | 5.3 connections/node |
+| **Diameter** | 5 (Estimated) |
 
 ### Connectivity
-- **Connected Components**: 2 (Main Narrative cluster + Style/Ontology definitions).
-- **Largest Component Size**: 56 nodes (82% of graph).
-- **Isolated Nodes**: 4 (Generic style metrics and unlinked ontology concepts like `narr:TAM_SAM_SOM`).
+*   **Connected Components**: 1 (The graph is fully connected via the `narr:` ontology).
+*   **Largest Component Size**: 100% of nodes.
+*   **Isolated Nodes**: 0 (All nodes are anchored to the ontology or a narrative).
 
 ## Importance Distribution
 ### Hub Concepts (Highest Degree)
-1. **narr:Narrative_ReviewerFrameOfReference** (12 connections) - The central anchor for Significance strategy.
-2. **narr:Narrative_SpecificityOverAmbition** (12 connections) - Core principle for Broader Impacts.
-3. **narr:Narrative_VagueBudgetVaguePlan** (12 connections) - Primary link between finance and credibility.
-4. **narr:Actor_DrSarahChen** (9 connections) - Key bridge between Reviewer Psychology and Significance.
-5. **narr:FrictionFailure** (8 connections) - The dominant lens for analyzing proposal rejection.
+1.  **Narrative_SpecificityOverAmbition** (12)
+2.  **Narrative_VagueBudgetVaguePlan** (12)
+3.  **Narrative_BiologyFramedComputation** (10)
+4.  **Narrative_BudgetAsProjectPlan** (10)
+5.  **Narrative_CompBioPreliminaryData** (10)
+6.  **Narrative_HolisticScoringHeuristic** (10)
+7.  **Narrative_InstitutionalCopyPaste** (10)
+8.  **Narrative_IntegratedBroaderImpacts** (10)
 
-### Bridge Concepts (Highest Betweenness)
-- **narr:AudienceFrames**: Connects high-level reviewer psychology (Chen) to specific implementation patterns (Williams).
-- **narr:Sample_ReviewerReadingProcess**: Acts as the evidentiary anchor for both structural claims and style observations.
+### Bridge Concepts (Betweenness)
+*   **Dr. James Thornton**: Bridges the "Computational Biology" domain with "General Grant Strategy."
+*   **Narrative_TriageTriggers**: Connects negative "Anti-patterns" to positive "Strategic Frameworks."
+*   **Claim_BudgetReadsLikeProjectPlan**: Bridges the "Organization" (Budgeting) and "Proof" (Execution) domains.
 
 ### Core vs. Periphery
-- **Core**: Reviewer psychology, Significance section framing, and Broader Impacts.
-- **Periphery**: Budget justification and Computational Biology (currently "leaf" clusters with few outgoing links to the strategic core).
+*   **Core**: Grant Reviewer Psychology and Narrative Framing (Specific Aims, Significance).
+*   **Periphery**: Specific tactical advice like "Supplies Lumping" or "US/UK Spelling" (Style).
 
 ## Community Structure
 ### Detected Communities
 | Community Name | Size | Key Concepts | Internal Density |
 | :--- | :--- | :--- | :--- |
-| **Reviewer Psychology** | 18 nodes | `SpecificAimsPrimacy`, `90SecondRule`, `HolisticScoring` | High |
-| **Strategic Framing** | 15 nodes | `GapConsequenceUnlock`, `SignificanceSectionFailure` | High |
-| **Social Impact** | 12 nodes | `IntegratedBroaderImpacts`, `InstitutionalCopyPaste` | Medium |
-| **Administrative Execution** | 10 nodes | `BudgetAsProjectPlan`, `EffortMilestoneAlignment` | Medium |
+| **Reviewer Psychology** | 25 nodes | `SpecificAimsPrimacy`, `HolisticScoring` | High |
+| **Budgetary Strategy** | 18 nodes | `BudgetAsProjectPlan`, `TriageTriggers` | Medium |
+| **Broader Impacts** | 15 nodes | `InstitutionalCopyPaste`, `Specificity` | High |
+| **Comp-Bio Domain** | 12 nodes | `BiologyFramedComputation`, `Thornton` | Medium |
 
-### Cross-Community Links
-- **Strong**: Reviewer Psychology ↔ Strategic Framing (via Sarah Chen's dual expertise).
-- **Weak**: Administrative Execution ↔ Reviewer Psychology (the link between budget errors and the "90-second gut reaction" is implied but not explicitly mapped).
+### Modularity Assessment
+The graph shows **Low Modularity**. Domains are heavily "muddled" (interconnected), which is a strength here: it reflects how a single budget choice (Organization) impacts reviewer perception (Strategy).
 
 ## Coverage Map
 ### By Domain
 | Domain | Node Count | Edge Count | Depth Score (1-10) |
 | :--- | :--- | :--- | :--- |
-| **Strategy** | 28 | 58 | 9 (Very Deep) |
-| **Style** | 18 | 32 | 7 (Solid) |
-| **Organization** | 4 | 6 | 2 (Thin) |
-| **Identity** | 0 | 0 | 0 (Missing) |
+| **Strategy** | 42 | 112 | 9 |
+| **Organization** | 18 | 45 | 7 |
+| **Proof** | 12 | 30 | 5 |
+| **Style** | 15 | 22 | 4 |
 
 ### Dense Areas
-- **Significance Section Strategy**: Exhaustive mapping of the "Gap-Consequence-Unlock" model.
-- **Reviewer Interiority**: Strong linkage between practitioner quotes and the "90-second rule."
+*   **The "First 90 Seconds"**: Extremely rich detail on the Specific Aims page and initial reviewer gut reactions.
+*   **Broader Impacts**: High density of claims regarding the failure of "Copy-Paste" institutional outreach.
 
 ### Sparse Areas
-- **Identity**: No mission statement or organizational "North Star" defined in the graph.
-- **Computational Biology**: Mentioned in memories but lacks deep extraction into the `narr:Strategy` domain.
+*   **Technical Documentation**: While the ontology supports it, there is little data on actual "API References" or "Schemas" for grant tracking.
+*   **Style Metrics**: Many concepts exist (Readability, Jargon Density) but lack specific evidence/claims.
 
 ## Structural Issues
 ### Orphan Concepts
-- **narr:TAM_SAM_SOM**: Defined in ontology but zero instances in current memories.
-- **narr:StyleMetrics_BroaderImpacts**: Needs stronger links to the aggregate `narr:StyleMetrics` node.
+*   **narr:SpeakerProfile_ExampleLeader**: Defined in ontology but has no instances or claims attached. *Action: Populate with a specific persona or remove.*
 
 ### Dead Ends
-- **narr:Claim_SuppliesLumpingSignal**: A rich insight that currently has no outgoing links to "Reviewer Psychology" (needs to be linked to `narr:Narrative_TriageTriggers`).
+*   **Claim_SuppliesLumpingSignal**: Has incoming support but no outgoing links to broader strategy nodes. *Action: Link to `Narrative_TriageTriggers`.*
 
 ### Potential Redundancies
-- **narr:Claim_SpecificityBeatsAmbition** and **narr:Narrative_SpecificityOverAmbition**: Overlapping definitions between a claim and its parent narrative.
+*   **Narrative_SpecificityOverAmbition** vs. **Claim_SpecificityBeatsAmbition**: These are nearly identical. *Action: Merge the claim into the narrative as a supporting evidence node.*
 
 ## Opportunities
 ### High-Value Missing Links
-- **Budget ↔ Triage Triggers**: Link `narr:Narrative_VagueBudgetVaguePlan` to `narr:Narrative_TriageTriggers` to show how budget errors trigger the "decline" instinct.
-- **CompBio ↔ AudienceFrames**: Link Thornton’s "Biology is Why" advice to Chen’s "Reviewer Mental Model" to create a cross-domain "Expertise Translation" pattern.
+*   **Link `Narrative_ReproducibilityAsBroaderImpact` to `Dr. James Thornton`**: Thornton's insights on comp-bio are the natural evidence base for reproducibility claims.
+*   **Link `Style:PlainLanguage` to `Narrative_SpecificAimsPrimacy`**: Connect the tactical need for clarity to the strategic goal of winning the reviewer in 90 seconds.
 
 ### Synthesis Candidates
-- **"The Reviewer's Frame"**: A potential new high-level Narrative node that synthesizes Chen (Significance), Williams (Impact), and Okafor (Budget).
+*   **Triage Anti-Patterns**: Multiple claims (Statistics lists, background-as-significance) could be synthesized into a single "Triage Taxonomy" node.
 
 ## Temporal Health
 ### Age Distribution
-- **Recent (Last 30 days)**: Budget Justification, Reviewer Psychology.
-- **Dormant (>120 days)**: Broader Impacts (Nov 2024), Significance Section (Sept 2024).
+*   **Recent (2025)**: Budgeting and Comp-Bio insights (Thornton/Okafor).
+*   **Dormant (2024)**: Reviewer Psychology (Chen).
 
 ### Recent Activity
-- The graph is currently expanding into **Administrative Execution** (Okafor) and **Reviewer Interiority** (Chen).
+*   The graph has grown significantly in the **Organization/Budgeting** domain in the last 30 days.
 
 ## Action Plan
-1. **Define Identity**: Save a memory explicitly defining the Grant Writing Collective's mission and unified methodology to populate the `Identity` section.
-2. **Bridge the Budget Gap**: Create `skos:related` links between `narr:Narrative_VagueBudgetVaguePlan` and `narr:Narrative_TriageTriggers` to codify the budget as a primary triage signal.
-3. **Consolidate Specificity**: Merge redundant specificity claims in the Broader Impacts domain to improve graph modularity.
+1.  **Consolidate Specificity**: Merge `Claim_SpecificityBeatsAmbition` into `Narrative_SpecificityOverAmbition` to reduce redundancy.
+2.  **Bridge the Gap**: Connect "Open Stakes" claims (e.g., `Claim_ThreePartStructure`) to "Settled Ground" narratives to increase graph conviction.
+3.  **Flesh out Style**: Add 3-5 claims to the `Style` domain, specifically linking `JargonPolicy` to `Narrative_BiologyFramedComputation`.
