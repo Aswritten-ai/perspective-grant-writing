@@ -1,0 +1,148 @@
+PREFIX narr: <https://aswritten.ai/narrative#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dct:  <http://purl.org/dc/terms/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX oa:   <http://www.w3.org/ns/oa#>
+
+# ── Transaction provenance (default graph) ──────────────────────
+INSERT DATA {
+  narr:Tx_20250308T120000Z a prov:Activity ;
+    dct:title "How Reviewers Actually Read Proposals — Dr. Sarah Chen + NSF panel webinar" ;
+    prov:generatedAtTime "2025-03-08T12:00:00Z"^^xsd:dateTime ;
+    prov:wasAssociatedWith "aswritten.ai" ;
+    prov:wasAttributedTo "n8n.aswritten.ai" ;
+    narr:originPath ".aswritten/memories/how-reviewers-actually-read-proposals.md" ;
+    narr:originRef "main@HEAD" ;
+    prov:generated
+      narr:Sample_ReviewerReadingProcess,
+      narr:Narrative_SpecificAimsPrimacy,
+      narr:Narrative_HolisticScoringHeuristic,
+      narr:Narrative_TriageTriggers,
+      narr:Claim_GutReactionFirstPage,
+      narr:Claim_OnesentenceAdvocacy,
+      narr:Claim_TriageAntiPatterns,
+      narr:StyleObs_GutReactionQuote,
+      narr:StyleObs_OnesentenceQuote,
+      narr:StyleMetrics_ReviewerReadingProcess .
+} ;
+
+# ── Extracted entities (named graph) ────────────────────────────
+INSERT DATA {
+  GRAPH narr:Tx_20250308T120000Z {
+
+    # ── Sample ──────────────────────────────────────────────────
+    narr:Sample_ReviewerReadingProcess a narr:Sample ;
+      dct:title "How Reviewers Actually Read Proposals" ;
+      skos:note "Grant Writers' Collective webinar 'Inside the review room', 2025-03-08. Sources: Dr. Sarah Chen and panel discussion with 4 current/former NSF reviewers." ;
+      narr:inputLength 1847 .
+
+    # ── Narratives ───────────────────────────────────────────────
+    narr:Narrative_SpecificAimsPrimacy a narr:Narrative ;
+      dct:source narr:Sample_ReviewerReadingProcess ;
+      skos:broader narr:AudienceFrames ;
+      narr:theme "The specific aims page is the most important page in a grant proposal because reviewers form a gut reaction in the first 90 seconds that the rest of the review either confirms or fights" ;
+      skos:note "Every reviewer develops a gut reaction in the first 90 seconds. The rest of the review is either confirming or fighting that reaction. Changing a reviewer's mind after the aims page requires work — and reviewers are reading 35 proposals. The specific aims page is therefore the highest-leverage page in the proposal." .
+
+    narr:Narrative_HolisticScoringHeuristic a narr:Narrative ;
+      dct:source narr:Sample_ReviewerReadingProcess ;
+      skos:broader narr:FrictionFailure ;
+      narr:theme "Reviewers score holistically — they form an overall impression first and then find evidence to support it, meaning a strong aims page can carry a mediocre methods section but not vice versa" ;
+      skos:note "Reviewers do not score each section independently and average. They have an overall impression and then find evidence to support it. A strong aims page with mediocre methods still gets funded; a mediocre aims page with brilliant methods rarely recovers. One memorable phrase or framing can carry the entire review." .
+
+    narr:Narrative_TriageTriggers a narr:Narrative ;
+      dct:source narr:Sample_ReviewerReadingProcess ;
+      skos:broader narr:FrictionFailure ;
+      narr:theme "Specific structural failures — aims written as tasks not questions, significance written as background, self-citation as innovation gap, and budget disconnected from experiments — reliably trigger triage" ;
+      skos:note "Four triage triggers identified by NSF reviewers: (1) Aims that are really tasks, not questions. (2) Significance that is really background. (3) Innovation claims that cite the PI's own prior work as the field gap. (4) Budgets that suggest the PI has never actually run the proposed experiments." .
+
+    # ── Claims ───────────────────────────────────────────────────
+    narr:Claim_GutReactionFirstPage a narr:Claim ;
+      dct:source narr:Sample_ReviewerReadingProcess ;
+      narr:aboutNode narr:Narrative_SpecificAimsPrimacy ;
+      narr:hasConvictionLevel narr:Conviction_Boulder ;
+      narr:supports narr:Narrative_SpecificAimsPrimacy ;
+      skos:note "Direct quote from NSF reviewer: 'I'll be honest — by the time I finish the specific aims, I've already decided if this is a fund or a decline. Everything after that either confirms my instinct or occasionally changes my mind. But changing my mind takes work, and I'm reading 35 of these.' Conviction: Boulder — first-person practitioner account corroborated by panel of 4 reviewers." .
+
+    narr:Claim_OnesentenceAdvocacy a narr:Claim ;
+      dct:source narr:Sample_ReviewerReadingProcess ;
+      narr:aboutNode narr:Narrative_HolisticScoringHeuristic ;
+      narr:hasConvictionLevel narr:Conviction_Boulder ;
+      narr:supports narr:Narrative_HolisticScoringHeuristic ;
+      skos:note "Direct quote from NSF reviewer: 'I can only fight for three proposals in the panel discussion. I fight for the ones I can explain in one sentence to the other panelists. If your proposal doesn't give me that sentence, I can't advocate for you.' Conviction: Boulder — panel advocacy constraint is structural and corroborated by multiple reviewers." .
+
+    narr:Claim_TriageAntiPatterns a narr:Claim ;
+      dct:source narr:Sample_ReviewerReadingProcess ;
+      narr:aboutNode narr:Narrative_TriageTriggers ;
+      narr:hasConvictionLevel narr:Conviction_Stake ;
+      narr:supports narr:Narrative_TriageTriggers ;
+      skos:note "Four triage anti-patterns enumerated by NSF reviewers: aims-as-tasks, significance-as-background, self-citation as innovation gap, budget disconnected from experiments. Conviction: Stake — practitioner enumeration, plausible and consistent with prior samples but not independently corroborated across sources." .
+
+    # ── Style Observations ───────────────────────────────────────
+    narr:StyleObs_GutReactionQuote a narr:StyleObservation ;
+      skos:broader narr:ToneDirectPersonal ;
+      dct:source narr:Sample_ReviewerReadingProcess ;
+      skos:note "First-person reviewer voice simulated in block quote; confessional opener ('I'll be honest') followed by declarative verdict, then concessive clause, closing with load-framing ('35 of these'). Rhetorical device: antithesis (confirms / changes my mind)." ;
+      oa:hasTarget [
+        a oa:SpecificResource ;
+        oa:hasSource narr:Sample_ReviewerReadingProcess ;
+        oa:hasSelector [
+          a oa:TextPositionSelector ;
+          oa:start 399 ;
+          oa:end 581
+        ] ;
+        oa:hasSelector [
+          a oa:TextQuoteSelector ;
+          oa:exact "I'll be honest — by the time I finish the specific aims, I've already decided if this is a fund or a decline." ;
+          oa:prefix "\"" ;
+          oa:suffix " Everything after that either confirms my instinct"
+        ]
+      ] .
+
+    narr:StyleObs_OnesentenceQuote a narr:StyleObservation ;
+      skos:broader narr:ToneDirectPersonal ;
+      dct:source narr:Sample_ReviewerReadingProcess ;
+      skos:note "Second-person address to PI ('your proposal'); conditional structure ('If … I can't') creates urgency. Rhetorical device: rule-of-three implied (fight / explain / advocate). Short punchy cadence in closing clause." ;
+      oa:hasTarget [
+        a oa:SpecificResource ;
+        oa:hasSource narr:Sample_ReviewerReadingProcess ;
+        oa:hasSelector [
+          a oa:TextPositionSelector ;
+          oa:start 1082 ;
+          oa:end 1237
+        ] ;
+        oa:hasSelector [
+          a oa:TextQuoteSelector ;
+          oa:exact "I can only fight for three proposals in the panel discussion. I fight for the ones I can explain in one sentence to the other panelists." ;
+          oa:prefix "\"" ;
+          oa:suffix " If your proposal doesn't give me that sentence"
+        ]
+      ] .
+
+    # ── Style Metrics ────────────────────────────────────────────
+    narr:StyleMetrics_ReviewerReadingProcess a narr:StyleMetrics ;
+      dct:source narr:Sample_ReviewerReadingProcess ;
+      skos:broader narr:StyleMetrics ;
+      skos:note "Practitioner panel voice; mix of declarative assertions, block quotes simulating reviewer interiority, and bullet-list anti-patterns. Dominant rhetorical devices: antithesis (fund/decline, confirms/fights), first-person reviewer simulation, rule-of-three in bullet lists. Tone: authoritative, direct, second-person address to PI audience." ;
+      narr:AverageSentenceLength "16"^^xsd:integer .
+
+  }
+} ;
+
+# ── Update narr:Actor_DrSarahChen (add new webinar appearance) ──
+DELETE {
+  GRAPH ?g {
+    narr:Actor_DrSarahChen skos:note ?oldNote .
+  }
+}
+INSERT {
+  GRAPH narr:Tx_20250308T120000Z {
+    narr:Actor_DrSarahChen skos:note "Former NSF review panel member; speaker at Grant Writers' Collective annual conference, 2024-09-15 (significance sections). Also featured in Grant Writers' Collective webinar 'Inside the review room', 2025-03-08, on how reviewers actually read proposals (panel with 4 current/former NSF reviewers)." .
+  }
+}
+WHERE {
+  GRAPH ?g {
+    narr:Actor_DrSarahChen skos:note ?oldNote .
+  }
+}
