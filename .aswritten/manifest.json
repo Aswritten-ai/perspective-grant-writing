@@ -1,4 +1,11 @@
 {
+  ".aswritten/stories/north-star.md": {
+    "path": ".aswritten/stories/north-star.md",
+    "sha": "ececb43ddbd201a984fb815343c8eb4f6fde7fef",
+    "tx": [
+      null
+    ]
+  },
   ".aswritten/stories/tx-summary.md": {
     "path": ".aswritten/stories/tx-summary.md",
     "sha": "3b3dc0fd972dabeed954416ab9bbee794ba9c038",
