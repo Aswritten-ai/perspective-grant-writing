@@ -1,6 +1,6 @@
-## 2025-03-08: The 90-Second Verdict — How Reviewers Actually Read
+## 2025-06-12: Computational biology framing shifts from "how" to "why"
 
-New insights from a panel of NSF reviewers reveal that grant funding is often decided in the first 90 seconds. Reviewers form a "gut reaction" while reading the Specific Aims page that the rest of the proposal either confirms or struggles to overcome. This shift moves our focus from "perfecting the science" to "winning the first page," emphasizing that a strong opening can carry mediocre methods, but brilliant methods rarely save a weak opening.
+This update establishes a settled strategy for computational biology proposals: success depends on framing algorithmic innovation as a biological "unlock" rather than a technical achievement. Insights from Dr. James Thornton emphasize that reviewers fund the biological questions a new method enables, not the novelty of the code itself. This shift moves the project toward a more nuanced, domain-specific understanding of how technical work must be "translated" for wet-lab reviewers.
 
-**Domains:** Audience Frames, Friction & Failure, Grant Strategy
-**Source:** Dr. Sarah Chen and NSF reviewer panel, "Inside the Review Room" webinar
+**Domains:** Computational Biology, Grant Strategy, Audience Framing
+**Source:** Dr. James Thornton, mentoring session for early-career faculty at Cold Spring Harbor
