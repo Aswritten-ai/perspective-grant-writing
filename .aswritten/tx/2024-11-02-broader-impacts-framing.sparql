@@ -1,0 +1,179 @@
+PREFIX narr: <https://aswritten.ai/narrative#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dct:  <http://purl.org/dc/terms/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX oa:   <http://www.w3.org/ns/oa#>
+
+# ── Transaction provenance (default graph) ──────────────────────
+INSERT DATA {
+  narr:Tx_20241102T120000Z a prov:Activity ;
+    dct:title "Broader Impacts: Beyond the Checkbox — Dr. Marcus Williams interview" ;
+    prov:generatedAtTime "2024-11-02T12:00:00Z"^^xsd:dateTime ;
+    prov:wasAssociatedWith "aswritten.ai" ;
+    prov:wasAttributedTo "n8n.aswritten.ai" ;
+    narr:originPath ".aswritten/memories/broader-impacts-beyond-the-checkbox.md" ;
+    narr:originRef "main@HEAD" ;
+    prov:generated
+      narr:Sample_BroaderImpactsBeyondCheckbox,
+      narr:Actor_DrMarcusWilliams,
+      narr:Narrative_IntegratedBroaderImpacts,
+      narr:Narrative_InstitutionalCopyPaste,
+      narr:Narrative_SpecificityOverAmbition,
+      narr:Claim_BoltOnBroaderImpacts,
+      narr:Claim_CopyPasteDetection,
+      narr:Claim_SpecificityBeatsAmbition,
+      narr:Claim_ExistingRelationshipsEvidence,
+      narr:StyleObs_BoltOnAntithesis,
+      narr:StyleObs_SpecificityContrast,
+      narr:StyleObs_DirectQuoteRhetoric,
+      narr:StyleMetrics_BroaderImpacts .
+} ;
+
+# ── Extracted entities (named graph) ────────────────────────────
+INSERT DATA {
+  GRAPH narr:Tx_20241102T120000Z {
+
+    # ── Sample ──────────────────────────────────────────────────
+    narr:Sample_BroaderImpactsBeyondCheckbox
+      a narr:Sample ;
+      dct:title "Broader Impacts: Beyond the Checkbox" ;
+      narr:inputLength 1872 ;
+      skos:note "Phone interview with Dr. Marcus Williams, retired program officer, NSF Division of Biological Infrastructure, 2024-11-02. Topic: common broader impacts mistakes in grant proposals." .
+
+    # ── Actor ───────────────────────────────────────────────────
+    narr:Actor_DrMarcusWilliams
+      a narr:Actor ;
+      skos:prefLabel "Dr. Marcus Williams" ;
+      skos:note "Retired program officer, NSF Division of Biological Infrastructure. Source of practitioner insight on broader impacts review criteria." .
+
+    # ── Narratives ──────────────────────────────────────────────
+    narr:Narrative_IntegratedBroaderImpacts
+      a narr:Narrative ;
+      dct:source narr:Sample_BroaderImpactsBeyondCheckbox ;
+      skos:broader narr:FrictionFailure ;
+      narr:theme "Broader impacts integrated into research design outperform those bolted on as compliance checkboxes" ;
+      skos:note "Reviewers can immediately distinguish proposals where broader impacts are structurally embedded in the research (e.g., field validation requiring community partnerships) from those where impact is a post-hoc addition. The best proposals make the impact inseparable from the science." .
+
+    narr:Narrative_InstitutionalCopyPaste
+      a narr:Narrative ;
+      dct:source narr:Sample_BroaderImpactsBeyondCheckbox ;
+      skos:broader narr:FrictionFailure ;
+      narr:theme "Institutional broader impacts infrastructure produces undifferentiated, copy-pasted proposals that reviewers recognize and discount" ;
+      skos:note "Universities push PIs toward shared outreach programs (REU, STEM pipelines), resulting in identical broader impacts sections across proposals from the same institution. Reviewers notice repeated program names and infer the PI did not genuinely engage with the requirement." .
+
+    narr:Narrative_SpecificityOverAmbition
+      a narr:Narrative ;
+      dct:source narr:Sample_BroaderImpactsBeyondCheckbox ;
+      skos:broader narr:ProblemStakes ;
+      narr:theme "Specific, evidenced broader impacts with existing partnerships score higher than ambitious but generic community engagement plans" ;
+      skos:note "Specificity (named institutions, existing relationships, letters of support) signals genuine commitment and feasibility. Vague language about 'underrepresented communities' is a red flag for reviewers." .
+
+    # ── Claims ──────────────────────────────────────────────────
+    narr:Claim_BoltOnBroaderImpacts
+      a narr:Claim ;
+      dct:source narr:Sample_BroaderImpactsBeyondCheckbox ;
+      narr:aboutNode narr:Narrative_IntegratedBroaderImpacts ;
+      narr:hasConvictionLevel narr:Conviction_Boulder ;
+      narr:supports narr:Narrative_IntegratedBroaderImpacts ;
+      skos:note "Direct quote from Dr. Marcus Williams: 'When I see our method requires field validation in underserved watersheds, which creates natural partnerships with tribal colleges who monitor those same systems — that's a broader impact that's also better science.' Contrasted with 'we will mentor two undergraduates' as a failure signal." .
+
+    narr:Claim_CopyPasteDetection
+      a narr:Claim ;
+      dct:source narr:Sample_BroaderImpactsBeyondCheckbox ;
+      narr:aboutNode narr:Narrative_InstitutionalCopyPaste ;
+      narr:hasConvictionLevel narr:Conviction_Boulder ;
+      narr:supports narr:Narrative_InstitutionalCopyPaste ;
+      skos:note "Direct quote from Dr. Marcus Williams: 'If I read three proposals from the same university and they all mention the same summer program, I know none of those PIs actually thought about broader impacts. They copy-pasted from the last funded proposal in their department.'" .
+
+    narr:Claim_SpecificityBeatsAmbition
+      a narr:Claim ;
+      dct:source narr:Sample_BroaderImpactsBeyondCheckbox ;
+      narr:aboutNode narr:Narrative_SpecificityOverAmbition ;
+      narr:hasConvictionLevel narr:Conviction_Stake ;
+      narr:supports narr:Narrative_SpecificityOverAmbition ;
+      skos:note "Practitioner advice: 'we will partner with Diné College's water monitoring program' beats 'we will engage underrepresented communities'. Specificity signals genuine planning and existing relationships." .
+
+    narr:Claim_ExistingRelationshipsEvidence
+      a narr:Claim ;
+      dct:source narr:Sample_BroaderImpactsBeyondCheckbox ;
+      narr:aboutNode narr:Narrative_SpecificityOverAmbition ;
+      narr:hasConvictionLevel narr:Conviction_Stake ;
+      narr:supports narr:Narrative_SpecificityOverAmbition ;
+      skos:note "A letter of support from a community partner already worked with is worth more than five paragraphs of plans. Evidence of existing relationships is the strongest signal of credible broader impacts." .
+
+    # ── Style Observations ──────────────────────────────────────
+    narr:StyleObs_BoltOnAntithesis
+      a narr:StyleObservation ;
+      skos:broader narr:Antithesis ;
+      dct:source narr:Sample_BroaderImpactsBeyondCheckbox ;
+      skos:note "Antithesis: 'bolt on to satisfy the requirement' vs. 'integrate broader impacts into the research design itself'" ;
+      oa:hasTarget [
+        a oa:SpecificResource ;
+        oa:hasSource narr:Sample_BroaderImpactsBeyondCheckbox ;
+        oa:hasSelector [
+          a oa:TextPositionSelector ;
+          oa:start 185 ;
+          oa:end 290
+        ] ;
+        oa:hasSelector [
+          a oa:TextQuoteSelector ;
+          oa:exact "something you bolt on to satisfy the requirement" ;
+          oa:prefix "Most PIs treat broader impacts as a tax — " ;
+          oa:suffix ". Reviewers can tell instantly."
+        ]
+      ] .
+
+    narr:StyleObs_SpecificityContrast
+      a narr:StyleObservation ;
+      skos:broader narr:Antithesis ;
+      dct:source narr:Sample_BroaderImpactsBeyondCheckbox ;
+      skos:note "Antithesis via paired examples: vague ('we will engage underrepresented communities') vs. specific ('we will partner with Diné College's water monitoring program')" ;
+      oa:hasTarget [
+        a oa:SpecificResource ;
+        oa:hasSource narr:Sample_BroaderImpactsBeyondCheckbox ;
+        oa:hasSelector [
+          a oa:TextPositionSelector ;
+          oa:start 1082 ;
+          oa:end 1200
+        ] ;
+        oa:hasSelector [
+          a oa:TextQuoteSelector ;
+          oa:exact "we will partner with Diné College's water monitoring program" ;
+          oa:prefix "\"" ;
+          oa:suffix "\" beats \"we will engage underrepresented communities\""
+        ]
+      ] .
+
+    narr:StyleObs_DirectQuoteRhetoric
+      a narr:StyleObservation ;
+      skos:broader narr:ToneDirectPersonal ;
+      dct:source narr:Sample_BroaderImpactsBeyondCheckbox ;
+      skos:note "First-person reviewer voice used in block quotes to simulate reviewer interiority, creating immediacy and authority" ;
+      oa:hasTarget [
+        a oa:SpecificResource ;
+        oa:hasSource narr:Sample_BroaderImpactsBeyondCheckbox ;
+        oa:hasSelector [
+          a oa:TextPositionSelector ;
+          oa:start 390 ;
+          oa:end 530
+        ] ;
+        oa:hasSelector [
+          a oa:TextQuoteSelector ;
+          oa:exact "When I see 'we will mentor two undergraduates,' I know the PI hasn't thought about this." ;
+          oa:prefix "\"" ;
+          oa:suffix " When I see 'our method requires field validation"
+        ]
+      ] .
+
+    # ── Style Metrics ───────────────────────────────────────────
+    narr:StyleMetrics_BroaderImpacts
+      a narr:StyleMetrics ;
+      dct:source narr:Sample_BroaderImpactsBeyondCheckbox ;
+      skos:broader narr:StyleMetrics ;
+      skos:note "Practitioner voice with direct address. Mix of declarative assertions and block quotes simulating reviewer interiority. Dominant devices: antithesis, specificity contrast, first-person reviewer simulation. Tone: authoritative, direct, second-person address to PI audience." ;
+      narr:AverageSentenceLength "17"^^xsd:integer .
+
+  }
+}
