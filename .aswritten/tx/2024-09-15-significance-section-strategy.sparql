@@ -1,0 +1,211 @@
+PREFIX narr: <https://aswritten.ai/narrative#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dct:  <http://purl.org/dc/terms/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX oa:   <http://www.w3.org/ns/oa#>
+
+# ── Transaction provenance (default graph) ──────────────────────────────────
+INSERT DATA {
+  narr:Tx_20240915T120000Z a prov:Activity ;
+    dct:title "Grant Writing: The Significance Section — Dr. Sarah Chen workshop notes" ;
+    prov:generatedAtTime "2024-09-15T12:00:00Z"^^xsd:dateTime ;
+    prov:wasAssociatedWith "aswritten.ai" ;
+    prov:wasAttributedTo "n8n.aswritten.ai" ;
+    narr:originPath ".aswritten/memories/grant-writing-significance-section.md" ;
+    narr:originRef "main@HEAD" ;
+    prov:generated
+      narr:Sample_GrantSignificanceSection,
+      narr:Actor_DrSarahChen,
+      narr:Narrative_ReviewerFrameOfReference,
+      narr:Narrative_GapConsequenceUnlock,
+      narr:Narrative_SignificanceSectionFailure,
+      narr:Claim_SignificanceSectionFailureMode,
+      narr:Claim_ReviewerMentalModelGap,
+      narr:Claim_ThreePartStructure,
+      narr:Claim_AntiPatterns,
+      narr:StyleObs_Antithesis_DontTellShowWorld,
+      narr:StyleObs_ImperativeVoice_ShowWorld,
+      narr:StyleObs_RuleOfThree_GapConsequenceUnlock,
+      narr:StyleObs_RhetoricalReframe_NotAboutResearch,
+      narr:StyleObs_NegativeDefinition_WhatDoesntWork,
+      narr:StyleMetrics_GrantSignificanceSection .
+} ;
+
+# ── Extracted entities (named graph) ────────────────────────────────────────
+INSERT DATA {
+  GRAPH narr:Tx_20240915T120000Z {
+
+    # ── Sample ───────────────────────────────────────────────────────────────
+    narr:Sample_GrantSignificanceSection a narr:Sample ;
+      dct:title "Grant Writing: The Significance Section" ;
+      narr:inputLength 2041 ;
+      skos:note "Workshop notes from Dr. Sarah Chen, former NSF review panel member, at the Grant Writers' Collective annual conference, 2024-09-15. Topic: what reviewers actually look for in significance sections." .
+
+    # ── Actor ────────────────────────────────────────────────────────────────
+    narr:Actor_DrSarahChen a narr:Actor ;
+      skos:prefLabel "Dr. Sarah Chen" ;
+      skos:note "Former NSF review panel member; speaker at Grant Writers' Collective annual conference, 2024-09-15. Source of practitioner insight on grant significance sections." .
+
+    # ── Narratives ───────────────────────────────────────────────────────────
+    narr:Narrative_ReviewerFrameOfReference a narr:Narrative ;
+      dct:source narr:Sample_GrantSignificanceSection ;
+      narr:theme "Significance sections succeed by targeting the reviewer's mental model, not the PI's research agenda" ;
+      skos:broader narr:AudienceFrames ;
+      skos:note "Reviewers read 30–40 proposals per session and are looking for the one that makes them say 'oh, this matters because…'. The significance section must show a gap in the reviewer's existing mental model, not argue for the research's importance in the abstract." .
+
+    narr:Narrative_GapConsequenceUnlock a narr:Narrative ;
+      dct:source narr:Sample_GrantSignificanceSection ;
+      narr:theme "A three-part structure — gap statement, consequence frame, unlock — makes significance sections land" ;
+      skos:broader narr:ProblemStakes ;
+      skos:note "(1) Gap statement: what's missing, framed as a tension the reviewer already feels. (2) Consequence frame: what cannot be done without closing this gap. (3) Unlock: what becomes possible once the gap is closed, in terms the reviewer's own work connects to." .
+
+    narr:Narrative_SignificanceSectionFailure a narr:Narrative ;
+      dct:source narr:Sample_GrantSignificanceSection ;
+      narr:theme "Most significance sections fail due to framing errors, not weak science" ;
+      skos:broader narr:FrictionFailure ;
+      skos:note "Common failure modes: statistics lists, 'no one has studied X' claims (read as 'maybe there's a reason'), and background sections relabeled as significance sections." .
+
+    # ── Claims ───────────────────────────────────────────────────────────────
+    narr:Claim_SignificanceSectionFailureMode a narr:Claim ;
+      narr:aboutNode narr:Narrative_SignificanceSectionFailure ;
+      narr:hasConvictionLevel narr:Conviction_Boulder ;
+      narr:supports narr:Narrative_ReviewerFrameOfReference ;
+      dct:source narr:Sample_GrantSignificanceSection ;
+      skos:note "'The significance section is where most proposals fail — not because the science is weak, but because the PI doesn't connect their work to the reviewer's frame of reference.' Attributed to Dr. Sarah Chen, NSF panel member." .
+
+    narr:Claim_ReviewerMentalModelGap a narr:Claim ;
+      narr:aboutNode narr:Narrative_ReviewerFrameOfReference ;
+      narr:hasConvictionLevel narr:Conviction_Boulder ;
+      dct:source narr:Sample_GrantSignificanceSection ;
+      skos:note "'Your significance section isn't about your research. It's about the reviewer's understanding of the field. You're not arguing that your work matters — you're showing them a gap in their mental model they didn't know existed.' Direct quote from Dr. Sarah Chen." .
+
+    narr:Claim_ThreePartStructure a narr:Claim ;
+      narr:aboutNode narr:Narrative_GapConsequenceUnlock ;
+      narr:hasConvictionLevel narr:Conviction_Stake ;
+      dct:source narr:Sample_GrantSignificanceSection ;
+      skos:note "The gap-consequence-unlock structure is presented as practitioner advice, not empirically validated. Conviction level Stake: plausible and actionable but not yet corroborated by independent evidence." .
+
+    narr:Claim_AntiPatterns a narr:Claim ;
+      narr:aboutNode narr:Narrative_SignificanceSectionFailure ;
+      narr:hasConvictionLevel narr:Conviction_Stake ;
+      dct:source narr:Sample_GrantSignificanceSection ;
+      skos:note "Three anti-patterns identified: (1) statistics lists, (2) 'no one has studied X' claims, (3) background sections relabeled as significance sections." .
+
+    # ── Style Observations ───────────────────────────────────────────────────
+
+    # 1. Antithesis: "don't tell / show them"
+    narr:StyleObs_Antithesis_DontTellShowWorld a narr:StyleObservation ;
+      skos:broader narr:Antithesis ;
+      dct:source narr:Sample_GrantSignificanceSection ;
+      skos:note "Antithesis: imperative negation paired with positive imperative — 'don't tell the reviewer why it's important. Show them a world where the problem is solved'" ;
+      oa:hasTarget [
+        a oa:SpecificResource ;
+        oa:hasSource narr:Sample_GrantSignificanceSection ;
+        oa:hasSelector [
+          a oa:TextPositionSelector ;
+          oa:start 612 ;
+          oa:end 706
+        ] ;
+        oa:hasSelector [
+          a oa:TextQuoteSelector ;
+          oa:exact "don't tell the reviewer why it's important. Show them a world where the problem is solved" ;
+          oa:prefix "The trick is: " ;
+          oa:suffix " and ask them to imagine the difference."
+        ]
+      ] .
+
+    # 2. Imperative voice: "Show them a world"
+    narr:StyleObs_ImperativeVoice_ShowWorld a narr:StyleObservation ;
+      skos:broader narr:ToneDirectPersonal ;
+      dct:source narr:Sample_GrantSignificanceSection ;
+      skos:note "Direct imperative address to the PI reader — prescriptive, practitioner-voice instruction" ;
+      oa:hasTarget [
+        a oa:SpecificResource ;
+        oa:hasSource narr:Sample_GrantSignificanceSection ;
+        oa:hasSelector [
+          a oa:TextPositionSelector ;
+          oa:start 648 ;
+          oa:end 706
+        ] ;
+        oa:hasSelector [
+          a oa:TextQuoteSelector ;
+          oa:exact "Show them a world where the problem is solved and ask them to imagine the difference" ;
+          oa:prefix "don't tell the reviewer why it's important. " ;
+          oa:suffix "."
+        ]
+      ] .
+
+    # 3. Rule of Three: gap statement / consequence frame / unlock
+    narr:StyleObs_RuleOfThree_GapConsequenceUnlock a narr:StyleObservation ;
+      skos:broader narr:RuleOfThree ;
+      dct:source narr:Sample_GrantSignificanceSection ;
+      skos:note "Enumerated tricolon: The gap statement / The consequence frame / The unlock — parallel bold-label structure reinforces memorability" ;
+      oa:hasTarget [
+        a oa:SpecificResource ;
+        oa:hasSource narr:Sample_GrantSignificanceSection ;
+        oa:hasSelector [
+          a oa:TextPositionSelector ;
+          oa:start 1044 ;
+          oa:end 1110
+        ] ;
+        oa:hasSelector [
+          a oa:TextQuoteSelector ;
+          oa:exact "The gap statement" ;
+          oa:prefix "1. **" ;
+          oa:suffix "** — what's missing from the current understanding"
+        ]
+      ] .
+
+    # 4. Rhetorical reframe: "your significance section isn't about your research"
+    narr:StyleObs_RhetoricalReframe_NotAboutResearch a narr:StyleObservation ;
+      skos:broader narr:Antithesis ;
+      dct:source narr:Sample_GrantSignificanceSection ;
+      skos:note "Antithesis via negation-then-reframe: 'isn't about your research / It's about the reviewer's understanding' — classic expectation subversion for emphasis" ;
+      oa:hasTarget [
+        a oa:SpecificResource ;
+        oa:hasSource narr:Sample_GrantSignificanceSection ;
+        oa:hasSelector [
+          a oa:TextPositionSelector ;
+          oa:start 757 ;
+          oa:end 855
+        ] ;
+        oa:hasSelector [
+          a oa:TextQuoteSelector ;
+          oa:exact "your significance section isn't about your research. It's about the reviewer's understanding of the field" ;
+          oa:prefix "I tell every PI the same thing: " ;
+          oa:suffix "."
+        ]
+      ] .
+
+    # 5. Negative definition: "What doesn't work"
+    narr:StyleObs_NegativeDefinition_WhatDoesntWork a narr:StyleObservation ;
+      skos:broader narr:Antithesis ;
+      dct:source narr:Sample_GrantSignificanceSection ;
+      skos:note "Section structured entirely as negative definition — 'What doesn't work' — a rhetorical device that defines the positive space by exclusion" ;
+      oa:hasTarget [
+        a oa:SpecificResource ;
+        oa:hasSource narr:Sample_GrantSignificanceSection ;
+        oa:hasSelector [
+          a oa:TextPositionSelector ;
+          oa:start 1600 ;
+          oa:end 1625
+        ] ;
+        oa:hasSelector [
+          a oa:TextQuoteSelector ;
+          oa:exact "What doesn't work" ;
+          oa:prefix "## " ;
+          oa:suffix "\n\n- Lists of statistics"
+        ]
+      ] .
+
+    # ── Style Metrics ────────────────────────────────────────────────────────
+    narr:StyleMetrics_GrantSignificanceSection a narr:StyleMetrics ;
+      skos:broader narr:StyleMetrics ;
+      dct:source narr:Sample_GrantSignificanceSection ;
+      narr:AverageSentenceLength "18"^^xsd:integer ;
+      skos:note "Prose is moderately dense with practitioner voice; mix of short punchy imperatives and longer explanatory sentences. Dominant rhetorical devices: antithesis, rule-of-three, imperative address. Tone: authoritative, direct, second-person." .
+
+  }
+}
