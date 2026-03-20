@@ -28,7 +28,7 @@ The repository follows the standard `aswritten` architecture:
 
 *   **`.aswritten/memories/`**: 5 primary source documents (transcripts/notes) covering reviewer psychology, budgets, and computational biology.
 *   **`.aswritten/stories/`**: 5 `.md` templates for the stories listed above.
-*   **`.aswritten/tx/`**: Contains `.sparql` transactions (e.g., `2024-09-15-significance-section-strategy.sparql`) that map memory facts into the graph.
+*   **`.aswritten/tx/`**: Contains `.sparql` transactions that map memory facts into the graph.
 *   **`.aswritten/snapshots/`**: Compiled RDF snapshots of the worldview.
 *   **`ASWRITTEN.md` / `CLAUDE.md`**: Operational protocols governing AI interaction with collective memory.
 
