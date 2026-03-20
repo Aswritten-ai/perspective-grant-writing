@@ -23,3 +23,4 @@ The budget justification is the only part of the proposal where reviewers can se
 - Lumping supplies into a single line item (signals you haven't planned the experiments)
 
 > "The PIs who get funded consistently are the ones whose budgets read like a project plan. Every dollar has a reason, and the reasons connect to the narrative in the project description."
+

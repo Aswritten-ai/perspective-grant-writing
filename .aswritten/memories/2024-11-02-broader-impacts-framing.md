@@ -21,3 +21,4 @@ Most PIs treat broader impacts as a tax — something you bolt on to satisfy the
 Universities push PIs toward their existing outreach infrastructure — "use our REU program, mention our STEM pipeline." This produces identical broader impacts sections across every proposal from that institution. Reviewers notice.
 
 > "If I read three proposals from the same university and they all mention the same summer program, I know none of those PIs actually thought about broader impacts. They copy-pasted from the last funded proposal in their department."
+

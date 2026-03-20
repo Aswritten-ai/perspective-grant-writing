@@ -19,3 +19,4 @@ For computational work, preliminary data doesn't mean running your pipeline on t
 ## The reproducibility argument
 
 Computational proposals have a built-in broader impact: reproducibility. Every pipeline, every workflow, every documented parameter choice is a contribution to open science. But you have to frame it as a community resource, not just "we'll put the code on GitHub."
+
