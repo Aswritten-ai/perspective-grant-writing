@@ -36,7 +36,8 @@
     "path": ".aswritten/stories/summary.md",
     "sha": "ae829b7e24e615161778a6a83a0064d5fffc9a04",
     "tx": [
-      "/2024-09-15-significance-section-strategy.sparql"
+      "/2024-09-15-significance-section-strategy.sparql",
+      "/2024-11-02-broader-impacts-framing.sparql"
     ]
   },
   ".aswritten/stories/tx-summary.md": {
