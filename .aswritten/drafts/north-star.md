@@ -1,48 +1,47 @@
 # North Star
-Generated: 2024-05-23 | From: 11 memories | Last shift: 2025-01-20
+Generated: 2025-05-14 | From: 22 memories | Last shift: 2025-01-20
 
 ## Focus Lock
 [INACTIVE — operating in priority stack mode]
 
 ## Priority Stack
 
-### 1. Narrative-Budget Synthesis
-**What:** Ensure every budget line item explicitly mirrors a project milestone and narrative claim.
-**Why now:** Reviewers use the budget as a proxy for execution competence; "lumped" supplies or effort-timeline mismatches (e.g., 100% postdoc effort across parallel streams) trigger immediate triage.
+### 1. Specific Aims & Significance Refinement
+**What:** Rewrite project descriptions to lead with a "Gap-Consequence-Unlock" structure and a high-leverage Specific Aims page.
+**Why now:** Reviewers form a "fund/decline" gut reaction within the first 90 seconds; the Aims page is the highest-leverage document in the proposal.
+**Evidence:** `Claim_GutReactionFirstPage`, `Narrative_SpecificAimsPrimacy`, `Narrative_GapConsequenceUnlock`.
+**Blocks:** Blocks all downstream technical writing; a mediocre aims page cannot be recovered by brilliant methods.
+
+### 2. Budget-to-Narrative Alignment
+**What:** Audit all budget justifications to ensure every dollar maps to a specific project milestone and execution capability.
+**Why now:** Reviewers use the budget as a proxy for execution competence; "lumped" supplies or effort mismatches trigger immediate triage.
 **Evidence:** `Claim_BudgetReadsLikeProjectPlan`, `Claim_PostdocEffortMismatch`, `Narrative_VagueBudgetVaguePlan`.
-**Blocks:** Technical credibility and the "execution" score from reviewers.
+**Blocks:** Enables credibility in the "Project Plan" assessment; blocks final submission readiness.
 
-### 2. Structural Broader Impacts
-**What:** Replace generic institutional outreach boilerplate with "embedded" impacts (e.g., field validation in underserved watersheds).
-**Why now:** Reviewers are sensitized to "copy-paste" institutional programs; specificity and existing relationships (letters of support) are the highest signals of credibility.
-**Evidence:** `Claim_CopyPasteDetection`, `Claim_BoltOnBroaderImpacts`, `Narrative_SpecificityOverAmbition`.
-**Blocks:** Competitive differentiation in panels where science scores are tied.
-
-### 3. Significance Reframing
-**What:** Rewrite significance sections using the "Gap-Consequence-Unlock" model to shift the reviewer's mental model.
-**Why now:** Most proposals fail here by listing statistics instead of showing a gap in the reviewer's own field-view.
-**Evidence:** `Claim_ReviewerMentalModelGap`, `Narrative_GapConsequenceUnlock`, `Claim_SignificanceSectionFailureMode`.
-**Blocks:** Initial reviewer engagement and "buy-in" during the first 2 minutes of reading.
+### 3. Structural Broader Impacts Integration
+**What:** Replace "copy-paste" institutional outreach language with specific, embedded partnerships (e.g., tribal college field validation).
+**Why now:** Reviewers easily detect and penalize "post-hoc" impact additions and institutional boilerplate.
+**Evidence:** `Claim_BoltOnBroaderImpacts`, `Claim_CopyPasteDetection`, `Narrative_IntegratedBroaderImpacts`.
+**Blocks:** Enables "Better Science" narrative; differentiates the proposal from departmental peers.
 
 ## Session Protocol
 
 When starting a session:
-- Surface the current "Focus Lock" status and the top priority.
-- Check if the current task (e.g., drafting a section) aligns with the **Gap-Consequence-Unlock** or **Budget-Narrative** alignment principles.
+- Surface the **Priority Stack** and ask which specific section (Aims, Budget, or Impacts) the user is focusing on.
+- Check if the current draft relies on "Background" where "Significance" is required.
 
 When the user asks about something off-stack:
-- Briefly acknowledge, then ask: "How does this connect to the current priority of [Top Priority]?"
-- If it's a generic outreach plan, flag the `Claim_CopyPasteDetection` risk.
+- Briefly acknowledge, then pivot: "We can look at [X], but remember that reviewers triage based on the Budget/Aims alignment first. Should we verify that alignment before moving on?"
 
 When work reveals new information:
-- If a new reviewer anti-pattern or "Boulder" claim is identified, prompt the user to commit it to memory to update the North Star.
+- Flag if a user's plan creates a "Triage Trigger" (e.g., aims-as-tasks or self-citation as an innovation gap) and suggest a memory update to capture this specific anti-pattern.
 
 ## Horizon
 
 ### Next 2-4 Weeks
-- **Letter of Support Strategy:** Moving from "intent to partner" to "evidence of existing relationship" to bolster Broader Impacts.
-- **Equipment Capability Mapping:** Justifying hardware requests by specific degradation/distance constraints rather than generic need.
+- **Letter of Support Cultivation:** Moving from "planned" to "existing" relationships to provide evidence of feasibility (`Claim_ExistingRelationshipsEvidence`).
+- **Panel Advocacy Prep:** Distilling the proposal into a "one-sentence advocacy" statement for the panel discussion (`Claim_OnesentenceAdvocacy`).
 
 ### Open Questions
-- **Reviewer Personas:** We have NSF-specific insights; how do these mental models shift for NIH or private foundation panels? (Thin evidence in current graph).
-- **Quantifying "Unlock":** What specific metrics do reviewers find most "unlocking" in the Significance section?
+- **Reviewer Personas:** We lack specific memories on how *industry* reviewers differ from *academic* reviewers in this domain.
+- **Success Metrics:** No current memory tracks the "win rate" of the Gap-Consequence-Unlock structure vs. traditional formats.
