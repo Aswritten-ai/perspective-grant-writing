@@ -23,3 +23,4 @@ The three things that make a significance section land:
 - Lists of statistics about the problem's prevalence
 - Claims that "no one has studied X" (reviewers read this as "maybe there's a reason")
 - Significance sections that are really just background sections with the heading changed
+
