@@ -1,32 +1,34 @@
-# Transaction: budget-justification-patterns
+# Transaction: how-reviewers-actually-read-proposals.md
 
-**Source:** `.aswritten/memories/budget-justification-hidden-scoring-criterion.md`
+**Source:** `.aswritten/memories/how-reviewers-actually-read-proposals.md`
 **Contributor:** n8n.aswritten.ai
-**Date:** 2025-01-20
-**Domain:** Grant Proposals / Budget Strategy
+**Date:** 2025-03-08
+**Domain:** Grant Reviewer Psychology / NSF Panel Process
 
 ## Knowledge Added
 
-- **New Actor:** **Dr. Rachel Okafor**, Grants Administrator at Johns Hopkins University, providing practitioner insights on budget red flags.
-- **The "Hidden Criterion":** Introduced the concept that reviewers use the budget justification as a proxy for a PI's **execution competence**.
-- **Budget-Timeline Alignment:** New requirement for **Effort/Milestone Alignment**—specifically that personnel costs (e.g., postdocs) must mathematically match the workstreams in the project timeline.
-- **Capability Gap Justification:** Equipment requests must be justified by a specific **capability gap** (e.g., sample degradation limits) rather than generic need.
-- **Red Flag - "Lumping":** Lumping supplies into single line items is now codified as a signal of poor experimental planning.
+- **Specific Aims Primacy:** Established that reviewers form a "fund/decline" gut reaction within the first 90 seconds (the Aims page).
+- **Holistic Scoring Heuristic:** Reviewers do not average sections; they form an impression and then seek evidence to confirm it.
+- **One-Sentence Advocacy:** A proposal's success depends on providing the reviewer with a single, explainable sentence to use during panel advocacy.
+- **Triage Triggers:** Identified four specific anti-patterns:
+    - Aims written as tasks rather than questions.
+    - Significance framed as background.
+    - Innovation claims based on the PI's own prior work.
+    - Budgets disconnected from experimental reality.
 
 ## Connections
 
-This transaction strengthens the **Friction/Failure** and **KPIs/Success** domains by linking financial documentation to project management credibility.
+This transaction significantly deepens the **AudienceFrames** and **FrictionFailure** domains by connecting high-level strategy to the physical and temporal constraints of a reviewer (reading 35+ proposals). It updates the profile of **Dr. Sarah Chen**, linking her previous advice on "Significance" to this broader "Inside the Review Room" context.
 
 ```mermaid
 graph LR
-    Budget[Budget Justification] -- "signals" --> Plan[Project Plan Credibility]
-    Budget -- "must match" --> Timeline[Project Milestones]
-    Okafor[Dr. Rachel Okafor] -- "defines" --> RedFlags[Budget Red Flags]
-    RedFlags -- "includes" --> Lumping[Supplies Lumping]
-    RedFlags -- "includes" --> Mismatch[Effort Mismatch]
-    Plan -- "influences" --> Funding[Funding Success]
+    A[Specific Aims Page] -- "90s Gut Reaction" --> B(Reviewer Mental Model)
+    B -- "Confirms/Fights" --> C[Methods/Narrative]
+    D[One-Sentence Advocacy] -- "Enables" --> E(Panel Support)
+    F[Triage Triggers] -- "Causes" --> G(Friction Failure)
+    A -- "Highest Leverage" --> D
 ```
 
 ## Worldview Impact
 
-We can now evaluate grant narratives not just on scientific merit, but on **operational coherence**. This transaction shifts our understanding of the budget from a "compliance document" to a "strategic narrative" that can trigger proposal triage. It enables us to identify specific "red flag" patterns—such as 100% postdoc effort against parallel workstreams—that previously might have seemed like minor formatting issues but are actually seen by reviewers as fundamental planning failures.
+We can now answer exactly *why* certain structural errors lead to immediate rejection: they violate the reviewer's "confirmation bias" workflow. This shifts our understanding of grant writing from a "comprehensive documentation" task to a "psychological anchoring" task. This enables us to prioritize the Specific Aims page as the primary point of failure and provides a specific "one-sentence" test for all future content generation.
