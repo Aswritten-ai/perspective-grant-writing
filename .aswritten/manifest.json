@@ -13,6 +13,13 @@
       null
     ]
   },
+  ".aswritten/stories/summary.md": {
+    "path": ".aswritten/stories/summary.md",
+    "sha": "ae829b7e24e615161778a6a83a0064d5fffc9a04",
+    "tx": [
+      null
+    ]
+  },
   ".aswritten/stories/tx-summary.md": {
     "path": ".aswritten/stories/tx-summary.md",
     "sha": "3b3dc0fd972dabeed954416ab9bbee794ba9c038",
