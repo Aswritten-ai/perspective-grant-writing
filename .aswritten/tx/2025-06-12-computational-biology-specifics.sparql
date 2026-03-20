@@ -1,0 +1,141 @@
+PREFIX narr: <https://aswritten.ai/narrative#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dct:  <http://purl.org/dc/terms/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX oa:   <http://www.w3.org/ns/oa#>
+
+# ── Transaction provenance (default graph) ──────────────────────────────────
+INSERT DATA {
+  narr:Tx_20250612T120000Z a prov:Activity ;
+    dct:title "Computational Biology Proposals: Domain-Specific Patterns — Dr. James Thornton mentoring session" ;
+    prov:generatedAtTime "2025-06-12T12:00:00Z"^^xsd:dateTime ;
+    prov:wasAssociatedWith "aswritten.ai" ;
+    prov:wasAttributedTo "n8n.aswritten.ai" ;
+    narr:originPath ".aswritten/memories/computational-biology-proposals-domain-specific-patterns.md" ;
+    narr:originRef "main@HEAD" ;
+    prov:generated
+      narr:Actor_DrJamesThornton ,
+      narr:Sample_CompBioProposals ,
+      narr:Narrative_BiologyFramedComputation ,
+      narr:Narrative_CompBioPreliminaryData ,
+      narr:Narrative_ReproducibilityAsBroaderImpact ,
+      narr:Claim_AlgorithmIsHow ,
+      narr:Claim_OneFigureBeatenBenchmarks ,
+      narr:Claim_CommunityResourceFraming ,
+      narr:StyleObs_AlgorithmVsBiology ,
+      narr:StyleObs_OneFigureQuote ,
+      narr:StyleMetrics_CompBioProposals .
+} ;
+
+# ── Extracted entities (named graph) ────────────────────────────────────────
+INSERT DATA {
+  GRAPH narr:Tx_20250612T120000Z {
+
+    # ── Actor ──────────────────────────────────────────────────────────────
+    narr:Actor_DrJamesThornton a narr:Actor ;
+      skos:prefLabel "Dr. James Thornton" ;
+      skos:note "Computational biologist; funded 4x by NSF CAREER and R01. Source of practitioner insight on computational biology grant proposals. Delivered mentoring session for early-career faculty at Cold Spring Harbor, 2025-06-12." .
+
+    # ── Sample ─────────────────────────────────────────────────────────────
+    narr:Sample_CompBioProposals a narr:Sample ;
+      dct:title "Computational Biology Proposals: Domain-Specific Patterns" ;
+      skos:note "Mentoring session with Dr. James Thornton, computational biologist (4x NSF CAREER and R01 funded), for early-career faculty at Cold Spring Harbor, 2025-06-12. Topics: framing computational contributions, preliminary data strategy, reproducibility as broader impact." ;
+      narr:inputLength 1623 .
+
+    # ── Narratives ─────────────────────────────────────────────────────────
+
+    narr:Narrative_BiologyFramedComputation a narr:Narrative ;
+      dct:source narr:Sample_CompBioProposals ;
+      skos:broader narr:AudienceFrames ;
+      narr:theme "Computational proposals succeed when every algorithmic contribution is framed in terms of the biological question it enables, because reviewers from wet-lab backgrounds fund the 'why' not the 'how'" ;
+      skos:note "Structural bias exists against computational proposals: wet-lab reviewers may not perceive algorithm development as 'real' biology. The practitioner strategy is to describe methods not as 'novel algorithms' but as 'approaches that let us ask questions we couldn't ask before.' The algorithm is the how; the biology is the why. Reviewers fund the why." .
+
+    narr:Narrative_CompBioPreliminaryData a narr:Narrative ;
+      dct:source narr:Sample_CompBioProposals ;
+      skos:broader narr:FrictionFailure ;
+      narr:theme "Preliminary data for computational proposals must demonstrate biological discovery on real data, not pipeline performance on toy or simulated data" ;
+      skos:note "For computational work, preliminary data is not about running a pipeline on toy data or benchmarks on simulated data. It means showing that the approach reveals something biologically unexpected in real data — even if the analysis is incomplete. One figure where the method finds something a standard approach misses is worth more than ten benchmarks on simulated data." .
+
+    narr:Narrative_ReproducibilityAsBroaderImpact a narr:Narrative ;
+      dct:source narr:Sample_CompBioProposals ;
+      skos:broader narr:FrictionFailure ;
+      narr:theme "Computational proposals have a built-in broader impact advantage in reproducibility, but only when framed as a community resource rather than a code deposit" ;
+      skos:note "Every pipeline, workflow, and documented parameter choice is a contribution to open science. The framing must position these as community resources, not merely 'we'll put the code on GitHub.' Reviewers respond to the community resource frame, not the code-sharing frame." .
+
+    # ── Claims ─────────────────────────────────────────────────────────────
+
+    narr:Claim_AlgorithmIsHow a narr:Claim ;
+      dct:source narr:Sample_CompBioProposals ;
+      narr:aboutNode narr:Narrative_BiologyFramedComputation ;
+      narr:hasConvictionLevel narr:Conviction_Boulder ;
+      narr:supports narr:Narrative_BiologyFramedComputation ;
+      skos:note "Direct quote from Dr. James Thornton: 'I never describe my methods as novel algorithms. I describe them as approaches that let us ask questions we couldn't ask before. The algorithm is how — the biology is why. Reviewers fund the why.' Conviction: Boulder — 4x-funded practitioner with direct reviewer-facing experience; consistent with reviewer-framing patterns in prior samples." .
+
+    narr:Claim_OneFigureBeatenBenchmarks a narr:Claim ;
+      dct:source narr:Sample_CompBioProposals ;
+      narr:aboutNode narr:Narrative_CompBioPreliminaryData ;
+      narr:hasConvictionLevel narr:Conviction_Stake ;
+      narr:supports narr:Narrative_CompBioPreliminaryData ;
+      skos:note "Direct quote from Dr. James Thornton: 'Show one figure where your method finds something a standard approach misses. That's worth more than ten benchmarks on simulated data.' Conviction: Stake — practitioner advice, plausible and actionable but not independently corroborated across sources." .
+
+    narr:Claim_CommunityResourceFraming a narr:Claim ;
+      dct:source narr:Sample_CompBioProposals ;
+      narr:aboutNode narr:Narrative_ReproducibilityAsBroaderImpact ;
+      narr:hasConvictionLevel narr:Conviction_Stake ;
+      narr:supports narr:Narrative_ReproducibilityAsBroaderImpact ;
+      skos:note "Practitioner advice: reproducibility contributions (pipelines, workflows, documented parameters) must be framed as community resources, not merely code-on-GitHub. The framing distinction is the difference between a broader impact and a compliance checkbox. Conviction: Stake — consistent with integrated broader impacts pattern in snapshot but not independently corroborated for comp bio specifically." .
+
+    # ── Style Observations ─────────────────────────────────────────────────
+
+    narr:StyleObs_AlgorithmVsBiology a narr:StyleObservation ;
+      skos:broader narr:Antithesis ;
+      dct:source narr:Sample_CompBioProposals ;
+      skos:note "Antithesis: 'The algorithm is how — the biology is why.' Short punchy cadence with em-dash pivot. First-person practitioner voice." ;
+      oa:hasTarget [
+        a oa:SpecificResource ;
+        oa:hasSource narr:Sample_CompBioProposals ;
+        oa:hasSelector [
+          a oa:TextPositionSelector ;
+          oa:start 468 ;
+          oa:end 528
+        ] ,
+        [
+          a oa:TextQuoteSelector ;
+          oa:exact "The algorithm is how — the biology is why. Reviewers fund the why." ;
+          oa:prefix "we couldn't ask before.' " ;
+          oa:suffix ""
+        ]
+      ] .
+
+    narr:StyleObs_OneFigureQuote a narr:StyleObservation ;
+      skos:broader narr:ShortPunchyCadence ;
+      dct:source narr:Sample_CompBioProposals ;
+      skos:note "Short punchy declarative followed by quantified contrast ('one figure' vs 'ten benchmarks'). Antithesis structure with specificity contrast." ;
+      oa:hasTarget [
+        a oa:SpecificResource ;
+        oa:hasSource narr:Sample_CompBioProposals ;
+        oa:hasSelector [
+          a oa:TextPositionSelector ;
+          oa:start 1002 ;
+          oa:end 1087
+        ] ,
+        [
+          a oa:TextQuoteSelector ;
+          oa:exact "Show one figure where your method finds something a standard approach misses. That's worth more than ten benchmarks on simulated data." ;
+          oa:prefix "\"" ;
+          oa:suffix "\""
+        ]
+      ] .
+
+    # ── Style Metrics ──────────────────────────────────────────────────────
+
+    narr:StyleMetrics_CompBioProposals a narr:StyleMetrics ;
+      dct:source narr:Sample_CompBioProposals ;
+      skos:broader narr:StyleMetrics ;
+      skos:note "Practitioner mentoring voice with second-person address to early-career faculty. Mix of declarative assertions, block quotes simulating expert interiority, and antithesis contrasts (algorithm/biology, toy data/real data, GitHub deposit/community resource). Dominant devices: antithesis, short punchy cadence, first-person practitioner simulation. Tone: authoritative, direct, instructional." ;
+      narr:AverageSentenceLength "16"^^xsd:integer .
+
+  }
+}
