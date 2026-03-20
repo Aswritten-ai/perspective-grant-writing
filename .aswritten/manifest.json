@@ -1,4 +1,11 @@
 {
+  ".aswritten/stories/changelog.md": {
+    "path": ".aswritten/stories/changelog.md",
+    "sha": "ea360339d93e80e82f0d50c86072c44fc8090a36",
+    "tx": [
+      null
+    ]
+  },
   ".aswritten/stories/graph-health.md": {
     "path": ".aswritten/stories/graph-health.md",
     "sha": "ad9c45c59aaf094fc769b2f36fc868e4d2f6d7dd",
