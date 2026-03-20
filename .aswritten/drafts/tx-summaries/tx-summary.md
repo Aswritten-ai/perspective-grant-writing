@@ -1,34 +1,41 @@
-# Transaction: how-reviewers-actually-read-proposals.md
+# Transaction: 2025-06-12-computational-biology-specifics.sparql
 
-**Source:** `.aswritten/memories/how-reviewers-actually-read-proposals.md`
-**Contributor:** n8n.aswritten.ai
-**Date:** 2025-03-08
-**Domain:** Grant Reviewer Psychology / NSF Panel Process
+**Source:** `.aswritten/memories/computational-biology-proposals-domain-specific-patterns.md`  
+**Contributor:** Dr. James Thornton (via n8n.aswritten.ai)  
+**Date:** 2025-06-12  
+**Domain:** Computational Biology Grant Strategy  
 
 ## Knowledge Added
 
-- **Specific Aims Primacy:** Established that reviewers form a "fund/decline" gut reaction within the first 90 seconds (the Aims page).
-- **Holistic Scoring Heuristic:** Reviewers do not average sections; they form an impression and then seek evidence to confirm it.
-- **One-Sentence Advocacy:** A proposal's success depends on providing the reviewer with a single, explainable sentence to use during panel advocacy.
-- **Triage Triggers:** Identified four specific anti-patterns:
-    - Aims written as tasks rather than questions.
-    - Significance framed as background.
-    - Innovation claims based on the PI's own prior work.
-    - Budgets disconnected from experimental reality.
+- **Entity:** `narr:Actor_DrJamesThornton`, a 4x NSF/NIH funded computational biologist.
+- **Framing Strategy:** Algorithmic novelty must be subordinated to biological utility. The "Algorithm is the *how*; Biology is the *why*."
+- **Preliminary Data Standard:** Shift from "pipeline performance on toy data" to "biological discovery on real data." A single figure showing a unique discovery beats ten benchmarks.
+- **Broader Impact Reframing:** Reproducibility (pipelines/workflows) should be positioned as a "community resource" rather than a "code deposit" to gain reviewer credit.
 
 ## Connections
 
-This transaction significantly deepens the **AudienceFrames** and **FrictionFailure** domains by connecting high-level strategy to the physical and temporal constraints of a reviewer (reading 35+ proposals). It updates the profile of **Dr. Sarah Chen**, linking her previous advice on "Significance" to this broader "Inside the Review Room" context.
+This transaction specializes the general `narr:AudienceFrames` and `narr:FrictionFailure` patterns previously established by Dr. Sarah Chen. While Chen focused on the "Specific Aims" page as a gut-reaction trigger, Thornton provides the domain-specific content to win that reaction in computational fields. It bridges the gap between general grant writing and the specific structural biases of wet-lab reviewers.
 
 ```mermaid
 graph LR
-    A[Specific Aims Page] -- "90s Gut Reaction" --> B(Reviewer Mental Model)
-    B -- "Confirms/Fights" --> C[Methods/Narrative]
-    D[One-Sentence Advocacy] -- "Enables" --> E(Panel Support)
-    F[Triage Triggers] -- "Causes" --> G(Friction Failure)
-    A -- "Highest Leverage" --> D
+    subgraph Existing
+    A[AudienceFrames]
+    B[FrictionFailure]
+    end
+    
+    subgraph New_Insights
+    C[Biology-Framed Computation]
+    D[Real-Data Preliminary Discovery]
+    E[Community Resource Framing]
+    end
+
+    C -->|Refines| A
+    D -->|Solves| B
+    E -->|Refines| B
+    
+    C -.->|Supports| D
 ```
 
 ## Worldview Impact
 
-We can now answer exactly *why* certain structural errors lead to immediate rejection: they violate the reviewer's "confirmation bias" workflow. This shifts our understanding of grant writing from a "comprehensive documentation" task to a "psychological anchoring" task. This enables us to prioritize the Specific Aims page as the primary point of failure and provides a specific "one-sentence" test for all future content generation.
+We can now provide specific guidance for computational PIs to overcome the "wet-lab bias" in review panels. This shifts our understanding of "preliminary data" from a technical validation step to a narrative one: its purpose is to prove the method's ability to find "biological truth" that others miss. This enables the creation of highly targeted coaching content for bioinformatics and systems biology faculty.
