@@ -1,30 +1,31 @@
-# Transaction: 2025-06-12-computational-biology-specifics
+# Transaction: grant-writing-significance-section.md
 
-**Source:** `/2025-06-12-computational-biology-specifics.md`
-**Contributor:** Dr. James Thornton
-**Date:** 2025-06-12
-**Domain:** Grant Writing / Computational Biology
+**Source:** `.aswritten/memories/grant-writing-significance-section.md`
+**Contributor:** n8n.aswritten.ai
+**Date:** 2024-09-15
+**Domain:** Grant Writing / Rhetorical Strategy
 
 ## Knowledge Added
 
-- **Concept: Biological Framing** – The strategy of describing computational methods as biological "whys" rather than algorithmic "hows" to overcome reviewer bias.
-- **Concept: Computational Preliminary Data** – Redefined as demonstrating biological discovery in real data rather than benchmarking on simulated/toy data.
-- **Concept: Reproducibility as Broader Impact** – Framing code and workflows as community resources rather than just "open source" checkboxes.
-- **Relationship:** `ComputationalMethod` → `enables` → `BiologicalQuestion`.
+- **New Actor:** **Dr. Sarah Chen**, a former NSF review panel member, providing practitioner-level insights.
+- **Framework:** The **Gap-Consequence-Unlock** three-part structure for significance sections.
+- **Key Concept:** **Reviewer Frame of Reference**—the idea that significance is about the reviewer's mental model, not the PI's research agenda.
+- **Anti-Patterns:** Identified common failure modes including "statistics lists" and "relabeled background sections."
+- **Stylistic Devices:** Use of **Antithesis** (e.g., "don't tell/show") and **Imperative Voice** to drive persuasive grant narratives.
 
 ## Connections
 
-This transaction refines the general **Reviewer Psychology** (from `2025-03-08`) by applying it to the specific friction between wet-lab reviewers and computational PIs. It connects to the **Broader Impacts** domain (`2024-11-02`) by identifying "Reproducibility" as a domain-specific impact strategy for computational work.
+This transaction bridges the gap between general **Audience Framing** and specific **Problem Stakes** within the grant writing domain. It connects high-level rhetorical concepts like the **Rule of Three** and **Antithesis** to the practical constraints of NSF review panels.
 
 ```mermaid
 graph LR
-    A[Computational Method] -- "framed as" --> B[Biological Why]
-    B -- "addresses" --> C[Reviewer Bias]
-    D[Preliminary Data] -- "must show" --> E[Unexpected Discovery]
-    F[Reproducibility] -- "serves as" --> G[Broader Impact]
-    C -.-> H[Funding Success]
+    SC[Dr. Sarah Chen] -->|Advocates| GCU[Gap-Consequence-Unlock]
+    GCU -->|Structures| SS[Significance Section]
+    SS -->|Targets| RMM[Reviewer Mental Model]
+    SS -.->|Fails via| AP[Anti-Patterns]
+    RMM ---|Part of| AF[Audience Frames]
 ```
 
 ## Worldview Impact
 
-This addition shifts our understanding of grant writing from a general "persuasion" task to a "translation" task for technical domains. We can now provide specific guidance for computational researchers on how to navigate the "wet-lab bias" of review panels. It enables the creation of content that helps PIs transform technical milestones (algorithms/pipelines) into biological value propositions, moving the organizational focus toward domain-specific strategy rather than just general writing tips.
+We can now move beyond treating "significance" as a measure of scientific merit and instead treat it as a **rhetorical intervention** in a reviewer's mental model. This shift allows us to diagnose proposal failures not as "weak science," but as "framing friction." This enables the creation of more targeted grant-writing guides and automated review tools that look for the specific **Gap-Consequence-Unlock** pattern rather than just topical relevance.
