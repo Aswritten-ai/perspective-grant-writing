@@ -1,15 +1,8 @@
-## 2024-11-02: Broader Impacts: Moving from Compliance to Integration
+## 2025-01-20: Budget justifications as a proxy for project execution
 
-We have codified a major shift in how "Broader Impacts" are framed in grant proposals, moving away from "bolt-on" outreach toward structural integration. This update establishes that reviewers can easily detect "copy-pasted" institutional programs and instead reward proposals where the impact is inseparable from the science—such as field research that naturally requires tribal college partnerships.
+We have codified a settled insight from institutional grant administrators: a budget justification is not just a financial document, but a "hidden scoring criterion" for project management. Reviewers use the budget to verify if a researcher actually knows how to execute their plan. Incoherent budgets—such as a postdoc assigned to three parallel workstreams—signal a vague project plan and often lead to immediate proposal triage.
 
-**Domains:** Grant Writing, Strategic Framing, Institutional Research
-**Source:** Dr. Marcus Williams (Retired NSF Program Officer), interview on common proposal failures.
+This shift moves our understanding of grant writing away from "compliance" and toward "strategic signaling." For those following the project, this highlights a critical friction point: brilliant science often fails not on its merits, but because the financial narrative fails to mirror the project's milestones and capability gaps.
 
-***
-
-## 2024-09-15: Reimagining the Grant Significance Section
-
-This update introduces a settled strategy for the "Significance" section of research grants, reframing it as a tool to bridge the reviewer's mental model rather than just a list of research goals. We’ve adopted a three-part "Gap-Consequence-Unlock" structure designed to show reviewers a gap in their own understanding of the field and the specific "unlock" that occurs once that gap is closed.
-
-**Domains:** Grant Writing, Narrative Strategy, Audience Framing
-**Source:** Dr. Sarah Chen (Former NSF Panel Member), workshop on reviewer psychology.
+**Domains:** Grant Writing, Project Strategy, Institutional Review
+**Source:** Dr. Rachel Okafor (Johns Hopkins University), internal training session on budget red flags.
