@@ -1,4 +1,11 @@
 {
+  ".aswritten/stories/graph-health.md": {
+    "path": ".aswritten/stories/graph-health.md",
+    "sha": "ad9c45c59aaf094fc769b2f36fc868e4d2f6d7dd",
+    "tx": [
+      null
+    ]
+  },
   ".aswritten/stories/north-star.md": {
     "path": ".aswritten/stories/north-star.md",
     "sha": "ececb43ddbd201a984fb815343c8eb4f6fde7fef",
