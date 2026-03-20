@@ -1,0 +1,175 @@
+PREFIX narr: <https://aswritten.ai/narrative#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dct:  <http://purl.org/dc/terms/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX oa:   <http://www.w3.org/ns/oa#>
+
+# Transaction provenance (default graph)
+INSERT DATA {
+  narr:Tx_20250120T120000Z a prov:Activity ;
+    dct:title "Budget Justification: The Hidden Scoring Criterion — Dr. Rachel Okafor training session" ;
+    prov:generatedAtTime "2025-01-20T12:00:00Z"^^xsd:dateTime ;
+    prov:wasAssociatedWith "aswritten.ai" ;
+    prov:wasAttributedTo "n8n.aswritten.ai" ;
+    narr:originPath ".aswritten/memories/budget-justification-hidden-scoring-criterion.md" ;
+    narr:originRef "main@HEAD" ;
+    prov:generated
+      narr:Sample_BudgetJustificationHiddenCriterion,
+      narr:Actor_DrRachelOkafor,
+      narr:Narrative_BudgetAsProjectPlan,
+      narr:Narrative_VagueBudgetVaguePlan,
+      narr:Narrative_EffortMilestoneAlignment,
+      narr:Narrative_EquipmentCapabilityGap,
+      narr:Claim_BudgetReadsLikeProjectPlan,
+      narr:Claim_PostdocEffortMismatch,
+      narr:Claim_SuppliesLumpingSignal,
+      narr:StyleObs_BudgetVaguePlanQuote,
+      narr:StyleObs_BudgetNarrativeQuote,
+      narr:StyleObs_RuleOfThreeBullets,
+      narr:StyleMetrics_BudgetJustification .
+} ;
+
+# Extracted entities (named graph)
+INSERT DATA {
+  GRAPH narr:Tx_20250120T120000Z {
+
+    # ── SAMPLE ──────────────────────────────────────────────────
+    narr:Sample_BudgetJustificationHiddenCriterion
+      a narr:Sample ;
+      dct:title "Budget Justification: The Hidden Scoring Criterion" ;
+      skos:note "Internal training session by Dr. Rachel Okafor, grants administrator, Johns Hopkins University. Topic: budget red flags and how budget justification functions as a hidden scoring criterion in grant proposals. Date: 2025-01-20." ;
+      narr:inputLength 1821 .
+
+    # ── ACTOR ───────────────────────────────────────────────────
+    narr:Actor_DrRachelOkafor
+      a narr:Actor ;
+      skos:prefLabel "Dr. Rachel Okafor" ;
+      skos:note "Grants administrator, Johns Hopkins University. Source of practitioner insight on budget justification as a hidden scoring criterion in grant proposals. Delivered internal training session for junior faculty on budget red flags, 2025-01-20." .
+
+    # ── NARRATIVES ──────────────────────────────────────────────
+    narr:Narrative_BudgetAsProjectPlan
+      a narr:Narrative ;
+      dct:source narr:Sample_BudgetJustificationHiddenCriterion ;
+      skos:broader narr:FrictionFailure ;
+      skos:note "Reviewers use the budget justification as a proxy for the PI's execution competence. PIs who get funded consistently produce budgets where every dollar has a reason and those reasons connect to the narrative in the project description. The budget is the only place reviewers can verify whether the PI actually knows how to execute." ;
+      narr:theme "A budget that reads like a project plan — every dollar justified and connected to the narrative — is a consistent predictor of funding success" .
+
+    narr:Narrative_VagueBudgetVaguePlan
+      a narr:Narrative ;
+      dct:source narr:Sample_BudgetJustificationHiddenCriterion ;
+      skos:broader narr:FrictionFailure ;
+      skos:note "A vague budget signals a vague plan. Reviewers infer from budget incoherence (e.g., postdoc at 100% effort with three parallel workstreams in the timeline) that the project plan itself is not credible. The budget justification is the only part of the proposal where reviewers can see whether the PI actually knows how to execute." ;
+      narr:theme "Vague budget justifications signal vague project plans and trigger reviewer skepticism about execution credibility" .
+
+    narr:Narrative_EffortMilestoneAlignment
+      a narr:Narrative ;
+      dct:source narr:Sample_BudgetJustificationHiddenCriterion ;
+      skos:broader narr:KPIsSuccess ;
+      skos:note "Effort allocations should match milestones: if Year 2 is the field season, that is where travel and personnel costs should concentrate. Mismatches between effort allocation and timeline milestones are a red flag reviewers notice." ;
+      narr:theme "Effort allocations and cost concentrations must mirror the project timeline milestones to signal credible planning" .
+
+    narr:Narrative_EquipmentCapabilityGap
+      a narr:Narrative ;
+      dct:source narr:Sample_BudgetJustificationHiddenCriterion ;
+      skos:broader narr:ProblemStakes ;
+      skos:note "Equipment should be justified by a specific capability gap, not generic need. Example: 'the nearest accessible instrument is 200 miles away and our samples degrade within 4 hours' is a strong justification; 'we need a mass spec' is not." ;
+      narr:theme "Equipment budget lines must be justified by a specific capability gap, not generic need statements" .
+
+    # ── CLAIMS ──────────────────────────────────────────────────
+    narr:Claim_BudgetReadsLikeProjectPlan
+      a narr:Claim ;
+      dct:source narr:Sample_BudgetJustificationHiddenCriterion ;
+      skos:note "Direct quote from Dr. Rachel Okafor: 'The PIs who get funded consistently are the ones whose budgets read like a project plan. Every dollar has a reason, and the reasons connect to the narrative in the project description.' Conviction: Boulder — practitioner with institutional vantage point, consistent with reviewer-facing framing in other samples." ;
+      narr:aboutNode narr:Narrative_BudgetAsProjectPlan ;
+      narr:hasConvictionLevel narr:Conviction_Boulder ;
+      narr:supports narr:Narrative_BudgetAsProjectPlan .
+
+    narr:Claim_PostdocEffortMismatch
+      a narr:Claim ;
+      dct:source narr:Sample_BudgetJustificationHiddenCriterion ;
+      skos:note "Direct quote from Dr. Rachel Okafor: 'I've seen brilliant science get triaged because the budget asked for a postdoc at 100% effort but the timeline showed three parallel workstreams. The reviewer does the math. If your budget doesn't add up, your project plan doesn't either.' Illustrates how effort-timeline mismatches trigger triage." ;
+      narr:aboutNode narr:Narrative_VagueBudgetVaguePlan ;
+      narr:hasConvictionLevel narr:Conviction_Boulder ;
+      narr:supports narr:Narrative_VagueBudgetVaguePlan .
+
+    narr:Claim_SuppliesLumpingSignal
+      a narr:Claim ;
+      dct:source narr:Sample_BudgetJustificationHiddenCriterion ;
+      skos:note "Lumping supplies into a single line item signals the PI has not planned the experiments. Reviewers interpret this as a planning failure, not a budget formatting choice. Conviction: Stake — practitioner advice, plausible but not independently corroborated." ;
+      narr:aboutNode narr:Narrative_VagueBudgetVaguePlan ;
+      narr:hasConvictionLevel narr:Conviction_Stake ;
+      narr:supports narr:Narrative_VagueBudgetVaguePlan .
+
+    # ── STYLE OBSERVATIONS ──────────────────────────────────────
+    narr:StyleObs_BudgetVaguePlanQuote
+      a narr:StyleObservation ;
+      skos:broader narr:ToneDirectPersonal ;
+      skos:note "First-person practitioner voice delivering a causal verdict. Short declarative sentence following a longer anecdote — classic short punchy cadence after setup." ;
+      dct:source narr:Sample_BudgetJustificationHiddenCriterion ;
+      oa:hasTarget [
+        a oa:SpecificResource ;
+        oa:hasSource narr:Sample_BudgetJustificationHiddenCriterion ;
+        oa:hasSelector [
+          a oa:TextPositionSelector ;
+          oa:start 338 ;
+          oa:end 516
+        ], [
+          a oa:TextQuoteSelector ;
+          oa:exact "I've seen brilliant science get triaged because the budget asked for a postdoc at 100% effort but the timeline showed three parallel workstreams." ;
+          oa:prefix "A vague budget signals a vague plan.\n\n> " ;
+          oa:suffix " The reviewer does the math."
+        ]
+      ] .
+
+    narr:StyleObs_BudgetNarrativeQuote
+      a narr:StyleObservation ;
+      skos:broader narr:ToneAuthoritative ;
+      skos:note "Closing aphoristic statement linking budget to narrative. Parallel structure: 'Every dollar has a reason, and the reasons connect to the narrative.' Functions as a memorable takeaway — cadence mirrors a rule-of-two with anaphoric 'reason/reasons'." ;
+      dct:source narr:Sample_BudgetJustificationHiddenCriterion ;
+      oa:hasTarget [
+        a oa:SpecificResource ;
+        oa:hasSource narr:Sample_BudgetJustificationHiddenCriterion ;
+        oa:hasSelector [
+          a oa:TextPositionSelector ;
+          oa:start 1558 ;
+          oa:end 1706
+        ], [
+          a oa:TextQuoteSelector ;
+          oa:exact "The PIs who get funded consistently are the ones whose budgets read like a project plan. Every dollar has a reason, and the reasons connect to the narrative in the project description." ;
+          oa:prefix "> " ;
+          oa:suffix "\n"
+        ]
+      ] .
+
+    narr:StyleObs_RuleOfThreeBullets
+      a narr:StyleObservation ;
+      skos:broader narr:RuleOfThree ;
+      skos:note "Both 'Patterns that work' and 'Common mistakes' sections use exactly three bullet points each, creating parallel rule-of-three structure. Signals deliberate rhetorical scaffolding for memorability." ;
+      dct:source narr:Sample_BudgetJustificationHiddenCriterion ;
+      oa:hasTarget [
+        a oa:SpecificResource ;
+        oa:hasSource narr:Sample_BudgetJustificationHiddenCriterion ;
+        oa:hasSelector [
+          a oa:TextPositionSelector ;
+          oa:start 554 ;
+          oa:end 1070
+        ], [
+          a oa:TextQuoteSelector ;
+          oa:exact "Effort allocations that match milestones" ;
+          oa:prefix "- **" ;
+          oa:suffix "** — if Year 2 is the field season"
+        ]
+      ] .
+
+    # ── STYLE METRICS ───────────────────────────────────────────
+    narr:StyleMetrics_BudgetJustification
+      a narr:StyleMetrics ;
+      dct:source narr:Sample_BudgetJustificationHiddenCriterion ;
+      skos:broader narr:StyleMetrics ;
+      skos:note "Practitioner training voice with second-person address to junior faculty. Mix of declarative assertions, block quotes simulating reviewer interiority, and parallel bullet lists. Dominant devices: antithesis (vague vs. specific), rule-of-three bullet structure, short punchy cadence in closing aphorism. Tone: authoritative, direct, instructional." ;
+      narr:AverageSentenceLength "16"^^xsd:integer .
+
+  }
+}
