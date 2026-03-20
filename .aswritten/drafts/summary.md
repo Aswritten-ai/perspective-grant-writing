@@ -39,11 +39,12 @@ The repository follows the standard `aswritten` architecture:
 
 | Transaction | Significance |
 | :--- | :--- |
+| **2025-03-08-reviewer-psychology** | **Reviewer Heuristics:** Codifies the "90-second rule" and the primacy of the Specific Aims page in forming gut reactions. |
 | **2025-01-20-budget-justification-patterns** | **Execution Credibility:** Links fiscal planning directly to project execution capability in the eyes of reviewers. |
 | **2024-11-02-broader-impacts-framing** | **Integration Strategy:** Challenges the "checkbox" approach; advocates for impacts that improve the science itself. |
 | **2024-09-15-significance-section-strategy** | **Structural Framework:** Introduces the "Gap-Consequence-Unlock" model for significance sections. |
 
-*(Note: Recent memories for Computational Biology (2025-06-12) and Reviewer Psychology (2025-03-08) are present in the repository but their corresponding transactions are currently being processed by the extraction pipeline.)*
+*(Note: The memory for Computational Biology (2025-06-12) is present in the repository but its corresponding transaction is currently being processed by the extraction pipeline.)*
 
 #### Knowledge Flow
 ```mermaid
