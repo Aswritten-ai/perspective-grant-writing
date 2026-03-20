@@ -1,31 +1,42 @@
-# Transaction: grant-writing-significance-section.md
+# Transaction: broader-impacts-framing
 
-**Source:** `.aswritten/memories/grant-writing-significance-section.md`
+**Source:** `.aswritten/memories/broader-impacts-beyond-the-checkbox.md`
 **Contributor:** n8n.aswritten.ai
-**Date:** 2024-09-15
-**Domain:** Grant Writing / Rhetorical Strategy
+**Date:** 2024-11-02
+**Domain:** Grant Writing / NSF Broader Impacts
 
 ## Knowledge Added
 
-- **New Actor:** **Dr. Sarah Chen**, a former NSF review panel member, providing practitioner-level insights.
-- **Framework:** The **Gap-Consequence-Unlock** three-part structure for significance sections.
-- **Key Concept:** **Reviewer Frame of Reference**—the idea that significance is about the reviewer's mental model, not the PI's research agenda.
-- **Anti-Patterns:** Identified common failure modes including "statistics lists" and "relabeled background sections."
-- **Stylistic Devices:** Use of **Antithesis** (e.g., "don't tell/show") and **Imperative Voice** to drive persuasive grant narratives.
+- **New Actor:** `Dr. Marcus Williams`, retired NSF Program Officer (Division of Biological Infrastructure).
+- **Key Concept: Integrated Broader Impacts:** The shift from "bolt-on" compliance to impacts structurally embedded in research design (e.g., field validation requiring tribal college partnerships).
+- **Institutional Copy-Paste Risk:** Identification of a failure mode where PIs use generic university outreach boilerplate, which reviewers recognize and discount.
+- **Specificity vs. Ambition:** The principle that named partners and existing relationships (evidenced by letters of support) outweigh ambitious but vague engagement plans.
 
 ## Connections
 
-This transaction bridges the gap between general **Audience Framing** and specific **Problem Stakes** within the grant writing domain. It connects high-level rhetorical concepts like the **Rule of Three** and **Antithesis** to the practical constraints of NSF review panels.
+This transaction expands the **FrictionFailure** and **ProblemStakes** domains by providing specific practitioner counter-examples to successful grant framing. It links to the existing `narr:StyleMetrics` and `narr:Antithesis` patterns, specifically contrasting "tax/compliance" framing with "integrated/better science" framing.
 
 ```mermaid
 graph LR
-    SC[Dr. Sarah Chen] -->|Advocates| GCU[Gap-Consequence-Unlock]
-    GCU -->|Structures| SS[Significance Section]
-    SS -->|Targets| RMM[Reviewer Mental Model]
-    SS -.->|Fails via| AP[Anti-Patterns]
-    RMM ---|Part of| AF[Audience Frames]
+    subgraph Existing Concepts
+    FF[FrictionFailure]
+    PS[ProblemStakes]
+    end
+
+    subgraph New Knowledge
+    IBI[Integrated Broader Impacts]
+    ICP[Institutional Copy-Paste]
+    SOA[Specificity Over Ambition]
+    MW[Dr. Marcus Williams]
+    end
+
+    MW -->|Expert Source| IBI
+    IBI -->|Subclass| FF
+    ICP -->|Subclass| FF
+    SOA -->|Subclass| PS
+    IBI ---|Antithesis| ICP
 ```
 
 ## Worldview Impact
 
-We can now move beyond treating "significance" as a measure of scientific merit and instead treat it as a **rhetorical intervention** in a reviewer's mental model. This shift allows us to diagnose proposal failures not as "weak science," but as "framing friction." This enables the creation of more targeted grant-writing guides and automated review tools that look for the specific **Gap-Consequence-Unlock** pattern rather than just topical relevance.
+We can now distinguish between "performative" and "structural" broader impacts in grant narratives. This shift moves our understanding of "impact" from a post-research output to a core component of research methodology. This enables the generation of content that coaches PIs to avoid "institutional boilerplate" and instead leverage specific, existing partnerships as high-conviction evidence of feasibility.
