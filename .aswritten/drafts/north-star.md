@@ -1,47 +1,47 @@
 # North Star
-Generated: 2024-05-23 | From: 7 memories | Last shift: 2024-09-15 (Dr. Sarah Chen insights)
+Generated: 2024-05-23 | From: 10 memories | Last shift: 2024-09-15 (Dr. Sarah Chen insights)
 
 ## Focus Lock
 [INACTIVE — operating in priority stack mode]
 
 ## Priority Stack
 
-### 1. Refine "Significance" Framework
-**What:** Codify the "Gap-Consequence-Unlock" structure into a repeatable template for grant writing.
-**Why now:** Current evidence suggests this is the primary failure point for NSF proposals; addressing it provides the highest leverage for success.
-**Evidence:** `Claim_SignificanceSectionFailureMode`, `Narrative_GapConsequenceUnlock`.
-**Blocks:** Enables the creation of high-impact sales materials and demo templates for grant writers.
+### 1. Significance Section Framework
+**What:** Codify the "Gap-Consequence-Unlock" structure into a repeatable drafting template.
+**Why now:** This is the primary failure mode identified by Dr. Sarah Chen; solving it provides the highest immediate value to PIs.
+**Evidence:** `Narrative_SignificanceSectionFailure`, `Claim_ReviewerMentalModelGap`.
+**Blocks:** Enables the development of automated review tools and significance section workshops.
 
-### 2. Anti-Pattern Detection
-**What:** Develop a diagnostic checklist to identify "statistics lists" and "relabeled background" sections in draft proposals.
-**Why now:** These are the most common "silent killers" of proposals according to expert reviewers.
-**Evidence:** `Claim_AntiPatterns`, `Narrative_SignificanceSectionFailure`.
-**Blocks:** Necessary for automated feedback loops in future product iterations.
+### 2. Broader Impacts Integration Strategy
+**What:** Develop a methodology for "Structural Embedding" of broader impacts into research design.
+**Why now:** Reviewers (Dr. Marcus Williams) are actively penalizing "copy-paste" institutional programs in favor of integrated science/impact models.
+**Evidence:** `Claim_BoltOnBroaderImpacts`, `Narrative_InstitutionalCopyPaste`.
+**Blocks:** Future content on tribal college partnerships and field validation models.
 
-### 3. Reviewer Empathy Mapping
-**What:** Create a persona profile for the "Overwhelmed Reviewer" (30–40 proposals/session) to guide tone and structure.
-**Why now:** Shifting from "research importance" to "reviewer mental models" is the core strategic pivot identified.
-**Evidence:** `Claim_ReviewerMentalModelGap`, `Narrative_ReviewerFrameOfReference`.
-**Blocks:** Influences all content/visibility and outreach strategies.
+### 3. Specificity & Evidence Audit
+**What:** Create a checklist to replace vague ambition with specific evidence (named partners, existing relationships).
+**Why now:** Specificity is the strongest signal of credibility and feasibility for reviewers.
+**Evidence:** `Claim_SpecificityBeatsAmbition`, `Claim_ExistingRelationshipsEvidence`.
+**Blocks:** Refinement of sales materials and "red flag" detection in draft reviews.
 
 ## Session Protocol
 
 When starting a session:
-- Surface the **Gap-Consequence-Unlock** framework if the user is drafting or reviewing content.
-- Remind the user that the goal is to **bridge the reviewer's mental model gap**, not just list facts.
+- Surface the "Gap-Consequence-Unlock" framework if the user is working on grant narrative or significance sections.
+- Remind the user that "no one has studied X" is a failure signal.
 
 When the user asks about something off-stack:
-- Briefly address the request, then ask: "How does this help us address the reviewer's frame of reference or the significance gap?"
+- Briefly address the request, then pivot back to how it connects to reviewer mental models or specificity.
 
 When work reveals new information:
-- If a user provides a new "anti-pattern" or a success story from a different agency (NIH, DoD), flag it for a new memory commit to refine the Priority Stack.
+- Flag any new "anti-patterns" or "reviewer pet peeves" for immediate commitment to memory to refine the Priority Stack.
 
 ## Horizon
 
 ### Next 2-4 Weeks
-- **Empirical Validation:** Test the "Three-Part Structure" against successful/unsuccessful grant samples to move it from "plausible" to "settled ground."
-- **Sales Material Development:** Convert Dr. Chen's insights into a "Significance Masterclass" lead magnet.
+- **Reviewer Persona Development:** Build detailed profiles based on the "30-40 proposals per session" fatigue factor to guide tone and brevity.
+- **Partnership Mapping:** Identify specific underserved institutions (like tribal colleges) to provide concrete examples for the "Integrated Impacts" priority.
 
 ### Open Questions
-- **Cross-Agency Variance:** Does the NSF "Significance" failure mode hold true for NIH "Innovation" or "Significance" sections? (Evidence thin for non-NSF domains).
-- **Automation Feasibility:** Can an LLM reliably distinguish between a "Background" section and a "Significance" section based on these narratives?
+- **Empirical Validation:** The "Gap-Consequence-Unlock" structure is currently practitioner advice; how can we validate its success rate in funded proposals?
+- **Institutional Resistance:** How do we help PIs push back against university offices that insist on "copy-paste" STEM pipeline language?
