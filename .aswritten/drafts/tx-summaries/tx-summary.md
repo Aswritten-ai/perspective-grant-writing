@@ -1,42 +1,32 @@
-# Transaction: broader-impacts-framing
+# Transaction: budget-justification-patterns
 
-**Source:** `.aswritten/memories/broader-impacts-beyond-the-checkbox.md`
+**Source:** `.aswritten/memories/budget-justification-hidden-scoring-criterion.md`
 **Contributor:** n8n.aswritten.ai
-**Date:** 2024-11-02
-**Domain:** Grant Writing / NSF Broader Impacts
+**Date:** 2025-01-20
+**Domain:** Grant Proposals / Budget Strategy
 
 ## Knowledge Added
 
-- **New Actor:** `Dr. Marcus Williams`, retired NSF Program Officer (Division of Biological Infrastructure).
-- **Key Concept: Integrated Broader Impacts:** The shift from "bolt-on" compliance to impacts structurally embedded in research design (e.g., field validation requiring tribal college partnerships).
-- **Institutional Copy-Paste Risk:** Identification of a failure mode where PIs use generic university outreach boilerplate, which reviewers recognize and discount.
-- **Specificity vs. Ambition:** The principle that named partners and existing relationships (evidenced by letters of support) outweigh ambitious but vague engagement plans.
+- **New Actor:** **Dr. Rachel Okafor**, Grants Administrator at Johns Hopkins University, providing practitioner insights on budget red flags.
+- **The "Hidden Criterion":** Introduced the concept that reviewers use the budget justification as a proxy for a PI's **execution competence**.
+- **Budget-Timeline Alignment:** New requirement for **Effort/Milestone Alignment**—specifically that personnel costs (e.g., postdocs) must mathematically match the workstreams in the project timeline.
+- **Capability Gap Justification:** Equipment requests must be justified by a specific **capability gap** (e.g., sample degradation limits) rather than generic need.
+- **Red Flag - "Lumping":** Lumping supplies into single line items is now codified as a signal of poor experimental planning.
 
 ## Connections
 
-This transaction expands the **FrictionFailure** and **ProblemStakes** domains by providing specific practitioner counter-examples to successful grant framing. It links to the existing `narr:StyleMetrics` and `narr:Antithesis` patterns, specifically contrasting "tax/compliance" framing with "integrated/better science" framing.
+This transaction strengthens the **Friction/Failure** and **KPIs/Success** domains by linking financial documentation to project management credibility.
 
 ```mermaid
 graph LR
-    subgraph Existing Concepts
-    FF[FrictionFailure]
-    PS[ProblemStakes]
-    end
-
-    subgraph New Knowledge
-    IBI[Integrated Broader Impacts]
-    ICP[Institutional Copy-Paste]
-    SOA[Specificity Over Ambition]
-    MW[Dr. Marcus Williams]
-    end
-
-    MW -->|Expert Source| IBI
-    IBI -->|Subclass| FF
-    ICP -->|Subclass| FF
-    SOA -->|Subclass| PS
-    IBI ---|Antithesis| ICP
+    Budget[Budget Justification] -- "signals" --> Plan[Project Plan Credibility]
+    Budget -- "must match" --> Timeline[Project Milestones]
+    Okafor[Dr. Rachel Okafor] -- "defines" --> RedFlags[Budget Red Flags]
+    RedFlags -- "includes" --> Lumping[Supplies Lumping]
+    RedFlags -- "includes" --> Mismatch[Effort Mismatch]
+    Plan -- "influences" --> Funding[Funding Success]
 ```
 
 ## Worldview Impact
 
-We can now distinguish between "performative" and "structural" broader impacts in grant narratives. This shift moves our understanding of "impact" from a post-research output to a core component of research methodology. This enables the generation of content that coaches PIs to avoid "institutional boilerplate" and instead leverage specific, existing partnerships as high-conviction evidence of feasibility.
+We can now evaluate grant narratives not just on scientific merit, but on **operational coherence**. This transaction shifts our understanding of the budget from a "compliance document" to a "strategic narrative" that can trigger proposal triage. It enables us to identify specific "red flag" patterns—such as 100% postdoc effort against parallel workstreams—that previously might have seemed like minor formatting issues but are actually seen by reviewers as fundamental planning failures.
