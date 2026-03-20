@@ -13,7 +13,8 @@
     "path": ".aswritten/stories/changelog.md",
     "sha": "ea360339d93e80e82f0d50c86072c44fc8090a36",
     "tx": [
-      "/2024-09-15-significance-section-strategy.sparql"
+      "/2024-09-15-significance-section-strategy.sparql",
+      "/2024-11-02-broader-impacts-framing.sparql"
     ]
   },
   ".aswritten/stories/graph-health.md": {
