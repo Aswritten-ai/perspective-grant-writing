@@ -1,47 +1,47 @@
 # North Star
-Generated: 2025-05-14 | From: 22 memories | Last shift: 2025-01-20
+Generated: 2024-05-24 | From: 276 facts | Last shift: 2025-06-12 (Thornton Mentoring Session)
 
 ## Focus Lock
-[INACTIVE — operating in priority stack mode]
+**INACTIVE** — Operating in priority stack mode.
 
 ## Priority Stack
 
-### 1. Specific Aims & Significance Refinement
-**What:** Rewrite project descriptions to lead with a "Gap-Consequence-Unlock" structure and a high-leverage Specific Aims page.
-**Why now:** Reviewers form a "fund/decline" gut reaction within the first 90 seconds; the Aims page is the highest-leverage document in the proposal.
-**Evidence:** `Claim_GutReactionFirstPage`, `Narrative_SpecificAimsPrimacy`, `Narrative_GapConsequenceUnlock`.
-**Blocks:** Blocks all downstream technical writing; a mediocre aims page cannot be recovered by brilliant methods.
+### 1. Specific Aims Refinement
+**What:** Rewrite the Specific Aims page to establish a "gut-reaction" win within the first 90 seconds.
+**Why now:** Reviewers decide "fund" or "decline" by the end of the aims; changing their mind later is "work" they won't do across 35 proposals.
+**Evidence:** `Claim_GutReactionFirstPage`, `Narrative_SpecificAimsPrimacy`.
+**Blocks:** Blocks all technical writing; if the Aims fail, the methods and budget are irrelevant.
 
-### 2. Budget-to-Narrative Alignment
-**What:** Audit all budget justifications to ensure every dollar maps to a specific project milestone and execution capability.
-**Why now:** Reviewers use the budget as a proxy for execution competence; "lumped" supplies or effort mismatches trigger immediate triage.
-**Evidence:** `Claim_BudgetReadsLikeProjectPlan`, `Claim_PostdocEffortMismatch`, `Narrative_VagueBudgetVaguePlan`.
-**Blocks:** Enables credibility in the "Project Plan" assessment; blocks final submission readiness.
+### 2. Biology-First Narrative Pivot
+**What:** Reframe computational methods as "approaches to ask new biological questions" rather than "novel algorithms."
+**Why now:** There is a structural bias where wet-lab reviewers fund the "why" (biology) but view the "how" (algorithm) as a mere tool.
+**Evidence:** `Claim_AlgorithmIsHow`, `Narrative_BiologyFramedComputation`.
+**Blocks:** Enables resonance with the review panel; prevents triage for being "just a tool paper."
 
-### 3. Structural Broader Impacts Integration
-**What:** Replace "copy-paste" institutional outreach language with specific, embedded partnerships (e.g., tribal college field validation).
-**Why now:** Reviewers easily detect and penalize "post-hoc" impact additions and institutional boilerplate.
-**Evidence:** `Claim_BoltOnBroaderImpacts`, `Claim_CopyPasteDetection`, `Narrative_IntegratedBroaderImpacts`.
-**Blocks:** Enables "Better Science" narrative; differentiates the proposal from departmental peers.
+### 3. Budget-Narrative Integration
+**What:** Audit the budget to ensure every dollar justifies a project milestone, specifically avoiding "lumped" supplies.
+**Why now:** Reviewers use the budget as a proxy for execution competence; "lumped" items signal a failure to plan experiments.
+**Evidence:** `Claim_BudgetReadsLikeProjectPlan`, `Claim_SuppliesLumpingSignal`.
+**Blocks:** Enables the "feasibility" score; prevents triage due to perceived lack of PI readiness.
 
 ## Session Protocol
 
 When starting a session:
-- Surface the **Priority Stack** and ask which specific section (Aims, Budget, or Impacts) the user is focusing on.
-- Check if the current draft relies on "Background" where "Significance" is required.
+- Surface the "Biology-First" framing. Ensure any technical description leads with the biological "unlock."
+- Check if the current task impacts the Specific Aims or the Budget. These are high-leverage anchors.
 
 When the user asks about something off-stack:
-- Briefly acknowledge, then pivot: "We can look at [X], but remember that reviewers triage based on the Budget/Aims alignment first. Should we verify that alignment before moving on?"
+- If the user asks for deep algorithmic optimization, remind them: "The algorithm is the how—the biology is the why. Does this optimization change the biological question we can ask?"
 
 When work reveals new information:
-- Flag if a user's plan creates a "Triage Trigger" (e.g., aims-as-tasks or self-citation as an innovation gap) and suggest a memory update to capture this specific anti-pattern.
+- If a new "Capability Gap" is identified (e.g., a specific instrument limitation), flag this to be added to the Budget Justification immediately.
 
 ## Horizon
 
 ### Next 2-4 Weeks
-- **Letter of Support Cultivation:** Moving from "planned" to "existing" relationships to provide evidence of feasibility (`Claim_ExistingRelationshipsEvidence`).
-- **Panel Advocacy Prep:** Distilling the proposal into a "one-sentence advocacy" statement for the panel discussion (`Claim_OnesentenceAdvocacy`).
+- **Broader Impacts Partnership:** Secure a Letter of Support from a specific community partner (e.g., a tribal college) to move past "institutional copy-paste" outreach.
+- **Preliminary Data Visualization:** Create "The Figure"—one visualization showing the method finding what standard approaches miss in real data.
 
 ### Open Questions
-- **Reviewer Personas:** We lack specific memories on how *industry* reviewers differ from *academic* reviewers in this domain.
-- **Success Metrics:** No current memory tracks the "win rate" of the Gap-Consequence-Unlock structure vs. traditional formats.
+- **Computational Preliminary Data:** Do we have "real data" results yet, or are we still relying on simulated benchmarks? (Critical for `Narrative_CompBioPreliminaryData`).
+- **Reviewer Mental Model:** What specific "tension" does the reviewer currently feel that our gap statement can resolve?
