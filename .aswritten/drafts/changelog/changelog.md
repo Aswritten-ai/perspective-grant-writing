@@ -1,8 +1,6 @@
-## 2025-01-20: Budget justifications as a proxy for project execution
+## 2025-03-08: The 90-Second Verdict — How Reviewers Actually Read
 
-We have codified a settled insight from institutional grant administrators: a budget justification is not just a financial document, but a "hidden scoring criterion" for project management. Reviewers use the budget to verify if a researcher actually knows how to execute their plan. Incoherent budgets—such as a postdoc assigned to three parallel workstreams—signal a vague project plan and often lead to immediate proposal triage.
+New insights from a panel of NSF reviewers reveal that grant funding is often decided in the first 90 seconds. Reviewers form a "gut reaction" while reading the Specific Aims page that the rest of the proposal either confirms or struggles to overcome. This shift moves our focus from "perfecting the science" to "winning the first page," emphasizing that a strong opening can carry mediocre methods, but brilliant methods rarely save a weak opening.
 
-This shift moves our understanding of grant writing away from "compliance" and toward "strategic signaling." For those following the project, this highlights a critical friction point: brilliant science often fails not on its merits, but because the financial narrative fails to mirror the project's milestones and capability gaps.
-
-**Domains:** Grant Writing, Project Strategy, Institutional Review
-**Source:** Dr. Rachel Okafor (Johns Hopkins University), internal training session on budget red flags.
+**Domains:** Audience Frames, Friction & Failure, Grant Strategy
+**Source:** Dr. Sarah Chen and NSF reviewer panel, "Inside the Review Room" webinar
